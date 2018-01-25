@@ -1,26 +1,33 @@
+/*
+ * -----------------------------------------------------------------------------
+ * Author	: Rahul Vishwakarma
+ * Date		: 24 January 2018
+ * Purpose	: Drawing program using OpenGL, to read/write/manipulate image files
+ * -----------------------------------------------------------------------------
+ */
 
 #include <stdio.h>
 #include <windows.h>
 #include "stdafx.h"
 
-//  Include GLUT, OpenGL, and GLU libraries
-#include <gl/glut.h>
-
-//  Standard Input\Output C Library
-#include "CImg.h"
+#include <gl/glut.h>	//  Include GLUT, OpenGL, and GLU libraries
+#include "CImg.h"		//  CImg C Library
 
 using namespace cimg_library;
 
-/**********************************************************/
+/************************** VARIABLES ********************************/
 #define window_width	512
 #define window_height	512
 
 char imageFullPath[255];
 CImg<unsigned char> *image = NULL;
-GLubyte checkImage[window_height][window_width][3];
+GLubyte checkImage[window_height][window_width][3]; // Static allocation of frame buffer
 //GLubyte ***checkImage = NULL;
 GLubyte color[] = { 0, 0, 0, 255 };
 int brush_size = 1;
+
+
+/************************** FUNCTIONS ********************************/
 
 /* Initialize the framebuffer with white color */
 void makeCheckImage(void)
@@ -55,8 +62,7 @@ void cimgDisplayBuffer() {
 			unsigned char * ptr_b = image->data(0, row, 0, 2); //blue pixels array 1'st row
 			unsigned char * ptr_a = image->data(0, row, 0, 3); //alpha array 1'st row
 			for (int col = 0; col < image->width(); col++) {
-				// Writing all rgb chanel values 
-				// Update the buffer 
+				// Writing all rgb chanel values Update the buffer 
 				checkImage[img_height - row][col][0] = (GLubyte)*(ptr_r);
 				checkImage[img_height - row][col][1] = (GLubyte)*(ptr_g);
 				checkImage[img_height - row][col][2] = (GLubyte)*(ptr_b);
@@ -291,7 +297,7 @@ void init(void)
 	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 }
 
-/* 3D Image buffer allocation
+/* Dynamic Image buffer allocation 
 void allocateFrameBuffer(int h, int w, int c) {
 	printf("Buffer size: %dx%dx%d \n", h,w,c);
 	checkImage = (GLubyte ***)malloc(h * sizeof(GLubyte **));
