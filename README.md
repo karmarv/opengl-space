@@ -1,6 +1,9 @@
 ﻿# H0 SimGL 
 # Basic Win32 ConsoleApplication
 
+### OpenGL API reference
+Link: https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/
+
 #### Steps 
 ```
 Go to the Debug folder and execute the following command.
