@@ -30,7 +30,7 @@ int brush_size = 1;
 /************************** FUNCTIONS ********************************/
 
 /* Initialize the framebuffer with white color */
-void makeCheckImage(void)
+void initFrameBufferPixels(void)
 {
 	brush_size = 1;
 	int i, j, c;
@@ -215,7 +215,7 @@ void keyboard(unsigned char key, int x, int y) {
 			break;
 		case ' ':
 			// Clear the frame on space
-			makeCheckImage();
+			initFrameBufferPixels();
 			glutPostRedisplay();
 			break;
 		case 'b':

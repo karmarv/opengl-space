@@ -16,7 +16,7 @@
 GLubyte checkImage[checkImageHeight][checkImageWidth][3];
 GLubyte color[] = { 0, 0, 0, 255 };
 
-void makeCheckImage(void)
+void initFrameBufferPixels(void)
 {
 	int i, j, c;
 	for (i = 0; i < checkImageHeight; i++) {
@@ -35,7 +35,7 @@ void init(void)
 {
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glShadeModel(GL_FLAT);
-	makeCheckImage();
+	initFrameBufferPixels();
 	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 }
 
@@ -124,7 +124,7 @@ void keyboard(unsigned char key, int x, int y) {
 			break;
 		case ' ':
 			// Clear the frame on space
-			makeCheckImage();
+			initFrameBufferPixels();
 			glutPostRedisplay();
 			break;
 		case 27:
