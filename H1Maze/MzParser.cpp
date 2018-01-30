@@ -28,19 +28,13 @@ void MzParser::readTextureFromConfigLine(char* config_line) {
 		printf("Id: %s\t", token);
 		token = strtok_s(NULL, delims, &context);
 		printf("Tex Name: %s, Len: %d\t ", token, stringLength(token));
-/*
-		if (texturesList == NULL) {
-			//texturesList = (char **)malloc(cntTexture * sizeof(char *));
-			texturesList = new char*[cntTexture];
-		}
-		//texturesList[cntTextureRead] = (char *)malloc((stringLength(token)+1) * sizeof(char));
-		texturesList[cntTextureRead] = new char[stringLength(token)];
-		strcpy_s(texturesList[cntTextureRead], stringLength(token), token);
-		printf("Name: %s\n", texturesList[cntTextureRead]);
-*/
+		//char buf[100];
+		//sprintf_s()
+		texturesList.push_back(sconvert(token, stringLength(token)));
 	}
 }
 
+/* evaluate the string length */
 int MzParser::stringLength(char *s) {
 	int c = 0;
 	while (s[c] != '\0')
@@ -48,6 +42,15 @@ int MzParser::stringLength(char *s) {
 	return c;
 }
 
+std::string MzParser::sconvert(const char *pCh, int arraySize) {
+	std::string str;
+	if (pCh[arraySize - 1] == '\0') str.append(pCh);
+	else for (int i = 0; i<arraySize; i++) str.append(1, pCh[i]);
+	printf(" Str: %s ", str.c_str());
+	return str;
+}
+
+/* Read various count and sizes from the configuration line buffer */
 void MzParser::readCountFromConfigLine(char* config_line) {
 	char* context = NULL;
 	char* token = strtok_s(config_line, delims, &context);
@@ -67,6 +70,7 @@ void MzParser::readCountFromConfigLine(char* config_line) {
 	}
 }
 
+/* Read dimensions from the configuration line buffer */
 void MzParser::readDimsFromConfigLine(char* config_line) {
 	char* context = NULL;
 	char* token = strtok_s(config_line, delims, &context);
@@ -80,6 +84,7 @@ void MzParser::readDimsFromConfigLine(char* config_line) {
 	}
 }
 
+/* Read the floor plan information from the read config line buffer */
 void MzParser::readFloorPlanFromConfigLine(char* config_line) {
 	char* context = NULL;
 	char* token = strtok_s(config_line, delims, &context);
@@ -115,8 +120,7 @@ void MzParser::createMazeFramebuffer(unsigned char fBuf[window_height][window_wi
 	int cellRow = 0, cellCol = 0;
 	int x1PxId = 0, x2PxId = 0, xOffset = (window_width / dimSceneX);
 	int y1PxId = 0, y2PxId = 0, yOffset = (window_height / dimSceneY);
-	int d = fBuf[0][0][0];
-	printf("Frame buffer for %dx%d window has val %d\n", window_height, window_width,d);
+	printf("Frame buffer for %dx%d window\n", window_height, window_width);
 	printf("Cell pixel offset (0,0)->(%dx%d) in window\n", xOffset, yOffset);
 	int brush_size = 2;
 	int i, j, textureId, c = 255; // Color the frame buffer white
@@ -147,7 +151,6 @@ void MzParser::createMazeFramebuffer(unsigned char fBuf[window_height][window_wi
 				}else
 					if (j == 0) printf("%d. Empty vertical lines\n", cellRow);
 			}
-
 			if (cellCol == (dimSceneX - 1)) cellCol = 0; // Reset cellCol
 		}
 		// Increment row after the first odd call
@@ -193,7 +196,7 @@ int MzParser::readMaze() {
 					else 
 						cntTextureRead++;
 				}else{
-					//Find Texture section
+					// Find Texture section
 					readCountFromConfigLine(bufr);
 					cntTextureRead++;
 				}
@@ -215,17 +218,41 @@ int MzParser::readMaze() {
 			}
 			/* then no read error */
 			count += 1;
-			//printf("%d: %s", count, bufr);  /* no "\n", why? */
 		}
-		/* fgets returned null */
-		if (errno != 0) {
+		if (err != 0) {
 			//exit(1);
 		}
-		
 	}
 	else {                    /* there was an error on open */
 		printf("Error in opening file \n");
 	}
 	
 	return 1;
+}
+
+/* Print all the configurations */
+void MzParser::printConfigurations() {
+	printf("Dimensions	: %d x %d \n", dimSceneX, dimSceneY);
+	printf("Wall Height	: %d \n", cntWallHeight);
+	printf("Cell Size	: %d \n", cntCellSize);
+	printf("Textr Count	: %d \n", cntTexture);
+	for (size_t i = 0; i < texturesList.size(); ++i)
+		printf("%d. Texture: %s \n", i, texturesList[i].c_str());
+}
+
+/* Test memory allocation in a class*/
+void MzParser::testAlloc() {
+
+	// Vector push
+	//vestring.push_back("A String");
+
+	// Char array 
+	char *ptr = NULL;
+	int i;
+	ptr = (char *)malloc(sizeof(char) * 30);
+	for (i = 0; i<30; i += 6)
+		gets_s(&ptr[i], 30);
+	for (i = 0; i<30; i += 6)
+		puts(&ptr[i]);
+	getchar();
 }

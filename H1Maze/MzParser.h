@@ -2,11 +2,12 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <sys/types.h>
+#include <string>
+#include <vector>
 
 
 #define MAXLINE 100
+#define MAXTEXCOUNT 50
 
 #define window_width	512
 #define window_height	512
@@ -19,8 +20,8 @@ public:
 	/************************** VARIABLES ********************************/
 
 	// Maze floor plan matrix
-	int **mazeFloorPlan;
-	char **texturesList;
+	int** mazeFloorPlan = NULL;
+	std::vector<std::string> texturesList;
 
 	// Triangle Vertices for texture
 	int **triangleVertices;
@@ -43,6 +44,9 @@ public:
 	void readTextureFromConfigLine(char* config_line);
 	void readFloorPlanFromConfigLine(char* config_line);
 	int stringLength(char *s);
+	std::string sconvert(const char *pCh, int arraySize);
+	void printConfigurations();
+	void testAlloc();
 	
 	void createMazeFramebuffer(unsigned char frameBuffer[window_height][window_width][RGBSIZE]);
 	void fillUnitCellFrameBuffer(unsigned char frameBuffer[window_height][window_width][RGBSIZE], int x1, int y1, int x2, int y2, int color);
