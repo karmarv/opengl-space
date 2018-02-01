@@ -10,6 +10,8 @@
 #include <windows.h>
 #include "stdafx.h"
 
+#define cimg_use_tiff
+
 #include <gl/glut.h>	//  Include GLUT, OpenGL, and GLU libraries
 #include "CImg.h"		//  CImg C Library
 
@@ -315,7 +317,8 @@ void allocateFrameBuffer(int h, int w, int c) {
 int main(int argc, char **argv) {
 	if (argc != 2){ /* argc should be 2 for correct execution */
 		/* We print argv[0] assuming it is the program name */
-		const char * imageFileName = "lena_color.bmp";
+		//const char * imageFileName = "lena_color.bmp";
+		const char * imageFileName = "monaLisa.tif";
 		printf("usage: %s filename", argv[0]);
 		sprintf_s(fileFullPath, "%s", imageFileName);
 		printf("Default file Name :: %s\n", fileFullPath);

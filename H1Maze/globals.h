@@ -4,8 +4,8 @@
 #define MAXLINE 100
 #define MAXTEXCOUNT 50
 
-#define window_width	640
-#define window_height	480
+#define window_width	1024
+#define window_height	1024
 #define RGBSIZE 3
 
 
