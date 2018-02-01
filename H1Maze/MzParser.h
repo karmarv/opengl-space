@@ -5,13 +5,7 @@
 #include <string>
 #include <vector>
 
-
-#define MAXLINE 100
-#define MAXTEXCOUNT 50
-
-#define window_width	512
-#define window_height	512
-#define RGBSIZE 3
+#include "globals.h"
 
 
 class MzParser
@@ -35,7 +29,7 @@ public:
 
 	/************************** FUNCTIONS ********************************/
 
-	MzParser();
+	MzParser(std::string mazeFileIn);
 	virtual ~MzParser();
 
 	int readMaze();

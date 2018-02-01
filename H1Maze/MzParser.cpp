@@ -3,10 +3,12 @@
 
 /* Variables for the Maze Parser program*/
 const char  delims[] = " "; //  ,\t\n
-const char mazeFile[] = "assets/maze2.txt";
+std::string mazeFile;
 
-MzParser::MzParser()
+MzParser::MzParser(std::string mazeFileIn)
 {
+	printf("Loading Maze %s ", mazeFileIn.c_str());
+	mazeFile = mazeFileIn;
 	cntTextureRead = 0;
 	cntFloorPlanRead = 0;
 	cntTexture = 0;
@@ -28,8 +30,6 @@ void MzParser::readTextureFromConfigLine(char* config_line) {
 		printf("Id: %s\t", token);
 		token = strtok_s(NULL, delims, &context);
 		printf("Tex Name: %s, Len: %d\t ", token, stringLength(token));
-		//char buf[100];
-		//sprintf_s()
 		texturesList.push_back(sconvert(token, stringLength(token)));
 	}
 }
@@ -45,7 +45,11 @@ int MzParser::stringLength(char *s) {
 std::string MzParser::sconvert(const char *pCh, int arraySize) {
 	std::string str;
 	if (pCh[arraySize - 1] == '\0') str.append(pCh);
-	else for (int i = 0; i<arraySize; i++) str.append(1, pCh[i]);
+	else 
+		for (int i = 0; i < arraySize; i++) {
+			if(pCh[i] != '\n')
+				str.append(1, pCh[i]);
+		}
 	printf(" Str: %s ", str.c_str());
 	return str;
 }
@@ -180,7 +184,7 @@ int MzParser::readMaze() {
 	int count = 0;
 	errno_t err;
 	printf("Reading Maze file\n");
-	err = fopen_s(&fpMz, mazeFile, "r");
+	err = fopen_s(&fpMz, mazeFile.c_str(), "r");
 	if (err == 0) {
 		/* then file opened successfully. */
 		while (fgets(bufr, MAXLINE, fpMz) != NULL) {

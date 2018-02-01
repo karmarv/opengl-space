@@ -19,7 +19,7 @@ using namespace cimg_library;
 #define window_width	512
 #define window_height	512
 
-char imageFullPath[255];
+char fileFullPath[255];
 CImg<unsigned char> *image = NULL;
 GLubyte checkImage[window_height][window_width][3]; // Static allocation of frame buffer
 //GLubyte ***checkImage = NULL;
@@ -30,7 +30,7 @@ int brush_size = 1;
 /************************** FUNCTIONS ********************************/
 
 /* Initialize the framebuffer with white color */
-void initFrameBufferPixels(void)
+void makeCheckImage(void)
 {
 	brush_size = 1;
 	int i, j, c;
@@ -54,7 +54,7 @@ void cimgDisplayBuffer() {
 			exit(0);
 		}
 		int img_height = image->height();
-		printf("Reading the image %s %d x %d\n", imageFullPath, img_height, image->width());
+		printf("Reading the image %s %d x %d\n", fileFullPath, img_height, image->width());
 		//Iterating over image buffer image rows
 		for (int row = 0; row < img_height; row++) {
 			unsigned char * ptr_r = image->data(0, row, 0, 0); //red pixels array 1'st row
@@ -215,7 +215,7 @@ void keyboard(unsigned char key, int x, int y) {
 			break;
 		case ' ':
 			// Clear the frame on space
-			initFrameBufferPixels();
+			makeCheckImage();
 			glutPostRedisplay();
 			break;
 		case 'b':
@@ -317,15 +317,15 @@ int main(int argc, char **argv) {
 		/* We print argv[0] assuming it is the program name */
 		const char * imageFileName = "lena_color.bmp";
 		printf("usage: %s filename", argv[0]);
-		sprintf_s(imageFullPath, "%s", imageFileName);
-		printf("Default file Name :: %s\n", imageFullPath);
+		sprintf_s(fileFullPath, "%s", imageFileName);
+		printf("Default file Name :: %s\n", fileFullPath);
 	} else {
 		// We assume argv[1] is a filename to open
-		sprintf_s(imageFullPath, "%s", argv[1]);
+		sprintf_s(fileFullPath, "%s", argv[1]);
 	}
 	try {
-		printf("Custom file Name :: %s\n", imageFullPath);
-		image = new CImg<unsigned char>(imageFullPath);
+		printf("Custom file Name :: %s\n", fileFullPath);
+		image = new CImg<unsigned char>(fileFullPath);
 	}
 	catch (CImgIOException&) {
 		printf("Unable to read image");

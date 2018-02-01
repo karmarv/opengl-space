@@ -1,7 +1,7 @@
 # textures.  the last one is always the texture of the floor
 TEXTURES 2  # number of textures
-1 wall1.tif
-2 floor.tif
+1 wall1.bmp
+2 floor.bmp
 
 
 # cell size
