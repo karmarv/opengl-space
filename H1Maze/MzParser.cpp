@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "MzParser.h"
 
+
 /* Variables for the Maze Parser program*/
 const char  delims[] = " "; //  ,\t\n
 std::string mazeFile;
@@ -178,6 +179,40 @@ void MzParser::fillUnitCellFrameBuffer(unsigned char fBuf[window_height][window_
 		}
 	}
 }
+
+/* Read a bitmap into the frame buffer 
+void cimgDisplayBuffer(CImg<unsigned char> *image, unsigned int ***checkImage) {
+	try {
+		if (image->height() > window_height || image->width() > window_width) {
+			printf("Image size is bigger than the window size");
+			exit(0);
+		}
+		int img_height = image->height();
+		printf("Reading the image %d x %d\n", img_height, image->width());
+		//Iterating over image buffer image rows
+		for (int row = 0; row < img_height; row++) {
+			unsigned char * ptr_r = image->data(0, row, 0, 0); //red pixels array 1'st row
+			unsigned char * ptr_g = image->data(0, row, 0, 1); //green pixels array 1'st row
+			unsigned char * ptr_b = image->data(0, row, 0, 2); //blue pixels array 1'st row
+			unsigned char * ptr_a = image->data(0, row, 0, 3); //alpha array 1'st row
+			for (int col = 0; col < image->width(); col++) {
+				// Writing all rgb chanel values Update the buffer 
+				checkImage[img_height - row][col][0] = (unsigned char)*(ptr_r);
+				checkImage[img_height - row][col][1] = (unsigned char)*(ptr_g);
+				checkImage[img_height - row][col][2] = (unsigned char)*(ptr_b);
+				ptr_r++;
+				ptr_g++;
+				ptr_b++;
+			}
+		}
+		printf("\nPixels Read \n");
+	}
+	catch (CImgIOException&) {
+		printf("Unable to read image");
+		exit(0);
+	}
+}
+*/
 
 /* Read Maze floor plan from the maze file*/
 int MzParser::readMaze() {

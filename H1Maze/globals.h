@@ -8,5 +8,3 @@
 #define window_height	1024
 #define RGBSIZE 3
 
-
-
