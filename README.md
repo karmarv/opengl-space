@@ -20,10 +20,11 @@ Open the solution HSolGL.sln in Visual Studio 2017 Community edition
 
 #### Resources
 1. OpenGL mother site @ www.opengl.org
-2. Nehe OpenGL Tutorials @ http://nehe.gamedev.net
-3. Nate Robin's OpenGL Tutor @ http://www.xmission.com/~nate/opengl.html
+2. Fundamentals on OpenGL @ http://www.songho.ca/opengl
+3. Nehe OpenGL Tutorials @ http://nehe.gamedev.net
+4. Nate Robin's OpenGL Tutor @ http://www.xmission.com/~nate/opengl.html
 	- Provides a few animated programs to illustrate OpenGL functions, such as gluLookAt. 
 	- Nate Robin also provides the original GLUT library.
-4. Lighthouse 3D tutorials @ http://www.lighthouse3d.com
+5. Lighthouse 3D tutorials @ http://www.lighthouse3d.com
 
 -------------------------------------
