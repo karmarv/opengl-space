@@ -10,7 +10,7 @@ int main(int argc, char **argv) {
 	if (argc != 2) {
 		fprintf(stderr,"Usage: run <file>\n");
 		fprintf(stderr,"argc: %d\n", argc);
-		return -1;
+		//return -1;
 	}
 
 	setDefaults();

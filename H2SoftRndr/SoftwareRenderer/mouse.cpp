@@ -101,8 +101,10 @@ void computeModelViewMatrix(void) {
 		glTranslatef(-eye_pos[0], -eye_pos[1], -eye_pos[2]);
 	}
 	else {
+
 		/* software rendering mode */
 		setModelviewMatrix(eye_pos, eye_theta, eye_phi);
+
 	}
 
 	return;

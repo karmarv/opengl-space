@@ -62,8 +62,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="SoftwareRenderer\FrameBuffer.cpp" />
     <ClCompile Include="SoftwareRenderer\mainMaze.cpp" />
+    <ClCompile Include="SoftwareRenderer\Matrices.cpp" />
     <ClCompile Include="SoftwareRenderer\mouse.cpp" />
     <ClCompile Include="SoftwareRenderer\OpenGL.cpp" />
     <ClCompile Include="SoftwareRenderer\Parser.cpp" />
@@ -72,12 +74,14 @@
     <ClCompile Include="SoftwareRenderer\Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Matrix.h" />
     <ClInclude Include="SoftwareRenderer\FrameBuffer.h" />
     <ClInclude Include="SoftwareRenderer\gl.h" />
     <ClInclude Include="SoftwareRenderer\globals.h" />
     <ClInclude Include="SoftwareRenderer\glu.h" />
     <ClInclude Include="SoftwareRenderer\glut.h" />
     <ClInclude Include="SoftwareRenderer\gl_ext.h" />
+    <ClInclude Include="SoftwareRenderer\Matrices.h" />
     <ClInclude Include="SoftwareRenderer\mouse.h" />
     <ClInclude Include="SoftwareRenderer\OpenGL.h" />
     <ClInclude Include="SoftwareRenderer\Parser.h" />

@@ -15,7 +15,7 @@
 extern FrameBuffer fb;
 extern Scene scene;
 
-bool opengl_test = true;
+bool opengl_test = false;
 bool bilerp_flag = false;
 
 Timer timer1;
@@ -45,11 +45,12 @@ void display(void) {
 		scene.renderSceneOpenGL();
 	}
 	else {
-		/* draw the scene with your software implementation.  you will need to fill the framebuffer with
-		   the appropriate color data */
+		/* draw the scene with your software implementation.  
+		   you will need to fill the framebuffer with the appropriate color data */
 		scene.renderSceneSoftware();
 		/* now take the framebuffer you rendered and dump it to the screen */
 		fb.dumpToScreen();
+	
 	}
 
 	glFinish();
@@ -140,7 +141,13 @@ void initGLUT(int argc, char **argv) {
 	/* init the mouse */
 	initMouse();
 
-	loadScene(argv[1]);
+	char fileFullPath[255];
+	if (argc != 2) {
+		sprintf_s(fileFullPath, "%s", "maze1.txt");
+	}else
+		sprintf_s(fileFullPath, "%s", argv[1]);
+	printf("Plan file Name :: %s\n", fileFullPath);
+	loadScene(fileFullPath);
 
     /* Enter main loop */
 	glutMainLoop();

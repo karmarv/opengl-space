@@ -55,3 +55,24 @@ void FrameBuffer :: dumpToScreen(void) {
 
 	return;
 }
+
+
+void FrameBuffer::makeCheckImage(void) {
+	int sz = width * height * 3;
+	//printf("Size: %d\n", sizeof(u08) * width * height * 3);
+	int brush_size = 1;
+	int i = 0, j = 0, k = 0, c = 0;
+	for (i = 0; i < (width); i++) {
+		for (j = 0; j < (height); j++) {
+			for (k = 0; k < 3; k++) {
+				// c= ((((i & 0x8) == 0) ^ ((j & 0x8)) == 0)) * 255;
+				if (k == 0)
+					c = ((((i & 0x8) == 0) ^ ((j & 0x8)) == 0)) * 255;
+				else
+					c = 0;
+				*(color_buffer++) = (GLubyte)c;
+			}
+		}
+	}
+	color_buffer -= sz;
+}

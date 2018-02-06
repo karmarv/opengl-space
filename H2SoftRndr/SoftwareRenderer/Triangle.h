@@ -87,6 +87,13 @@ class Triangle {
 		/* openGL rendering of the triangle */
 		void renderOpenGL(void);
 
+		/* Software rendering */
+		void rasterizeTriangle(void);
+		/* Triangle Inside test functions */
+		bool insideTriangle(int x, int y);
+		void lineEquation(Vertex *f, Vertex *vector1, Vertex *vector2);
+		float dotProduct(Vertex *v1, Vertex *v2);
+		void crossProduct(Vertex *result, Vertex *vector1, Vertex *vector2);
 
 		/* for debugging */
 		void print(void) {
