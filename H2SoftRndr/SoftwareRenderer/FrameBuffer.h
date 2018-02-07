@@ -38,6 +38,8 @@ class FrameBuffer {
 		void dumpColorBufferToFile(char *name);
 		void dumpToScreen(void);
 
+		// Draw functions
+		void setColorBuffer(int x, int y, int color[]);
 		void makeCheckImage(void);
 
 };

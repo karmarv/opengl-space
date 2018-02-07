@@ -49,21 +49,23 @@ void Triangle::rasterizeTriangle(void) {
 			x_max = v.x;
 	}
 	//printf("V1(%f,%f), V2(%f,%f) \n", x_min, y_min, x_max, y_max);
-	/*x_min = 0.0f;
-	y_min = 0.0f;
-	x_max = window_width;
-	y_max = window_height;*/
+	/* x_min = 0.0f; y_min = 0.0f;
+	   x_max = window_width;	y_max = window_height;*/
 	// Inside triangle test 
+	int color[3] = { 0, 255, 0 };
 	int y = 0, x = 0;
+	int inCount = 0;
 	for (y = y_min; y <= y_max; y++) {
 		for (x = x_min; x <= x_max; x++) {
 			if (insideTriangle(x, y)) {
-				printf("In (%d,%d)", x, y);
+				//printf("In (%d,%d)\n", x, y);
+				fb.setColorBuffer(x, y, color);
+				inCount++;
 			}
 		}
 	}
-	printf(" Vertices: \n");
-	print();
+	//printf("In Vertices: %d\n", inCount);
+	//print();
 }
 
 void Triangle::lineEquation(Vertex *f, Vertex *v1, Vertex *v2) {
@@ -83,14 +85,11 @@ void Triangle::crossProduct(Vertex *res_vector, Vertex *v1, Vertex *v2) {
 bool Triangle::insideTriangle(int x, int y) {
 	// v0 [ax, ay, az] x v1 [bx, by, bz] = { ay.bz - az.by; az.bx - ax.bz; ax.by - ay.bx }
 	// TODO: Fix, Keeping Z=1 for all vertices/point
-	v[0].z = 1;
-	v[1].z = 1;
-	v[2].z = 1;
+	v[0].z = 1; v[1].z = 1; v[2].z = 1;
 	Vertex f0, f1, f2;
 	lineEquation(&f0, &v[0], &v[1]);
 	lineEquation(&f1, &v[1], &v[2]);
 	lineEquation(&f2, &v[2], &v[0]);
-
 	Vertex p(x, y, 1);
 	if ((dotProduct(&p, &f0) > 0) &&
 		(dotProduct(&p, &f1) > 0) &&
@@ -98,6 +97,5 @@ bool Triangle::insideTriangle(int x, int y) {
 		// inside the triangle 
 		return true;
 	}
-
 	return false;
 }

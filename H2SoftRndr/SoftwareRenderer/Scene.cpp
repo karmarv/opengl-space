@@ -7,12 +7,7 @@ extern FrameBuffer fb;
 /* set the perspective projection matrix given the following values */
 void setPerspectiveProjection(float eye_fov, float aspect_ratio, float near, float far) {
 	/* TODO: remove openGL mode */
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	gluPerspective(eye_fov,		/* field of view in degree */
-		(double)window_width / (double)window_height, /* aspect ratio */
-		10,		/* near plane */
-		700);		/* far plane */
+
 }
 
 //TODO: REMOVE All OpenGL references
@@ -28,14 +23,8 @@ void setModelviewMatrix(float *eye_pos, float eye_theta, float eye_phi) {
 	m2.identity();
 
 	/* TODO: remove openGL mode */
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-	/* now rotate by phi */
-	glRotatef(-eye_phi, 1, 0, 0);
-	/* now rotate by theta */
-	glRotatef(-eye_theta, 0, 0, 1);
-	/* translate to get the eye origin in the center of the coordinate system */
-	glTranslatef(-eye_pos[0], -eye_pos[1], -eye_pos[2]);
+
+
 }
 
 /* this implements the software rendering of the scene */ 
@@ -43,14 +32,20 @@ void Scene :: renderSceneSoftware(void) {
 	/* this is the function you will write.  you will need to take the linked list of triangles
 	given by *original_head and draw them to the framebuffer fb */
 	
-   /* now clear all the stuff */
-	glClearColor(100 / (float)255, 0, 0, 0);
+    /* now clear all the stuff */
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	//Add test pattern in framebuffer
+	fb.makeCheckImage();
 
-	// Test triangles 
-	Vertex v1 = { 15.0f,15.0f,-10.0f,0.0f};
-	Vertex v2 = { 10.0f,10.0f,-10.0f,0.0f };
-	Vertex v3 = { 10.0f,20.0f,-10.0f,0.0f };
+	// Test triangles (Order is critical, otherwise the inside triangle logic doesnt work properly.)
+	/*
+	1. The vertex coordinate should be in homogeneous coordinates, if you are going to multiply it with the model-view and projection matrices:
+		Vertex v1 = { 0.0f,0.0f,1.0f,1.0f };
+		But if that is your screen coordinate, it is fine.
+	*/
+	Vertex v1 = { 0.0f,0.0f,1.0f,0.0f };
+	Vertex v2 = { 500.0f,500.0f,1.0f,0.0f };
+	Vertex v3 = { 0.0f,500.0f,1.0f,0.0f };
 	Triangle test(&v1, &v2, &v3);
 	test.rasterizeTriangle();
 
@@ -64,8 +59,7 @@ void Scene :: renderSceneSoftware(void) {
 	//ptr = original_head;
 	//ptr->t->rasterizeTriangle();
 
-	//Add test pattern in framebuffer
-	//fb.makeCheckImage();
+
 	
 	return;
 }

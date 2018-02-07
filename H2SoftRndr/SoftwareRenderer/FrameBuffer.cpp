@@ -49,25 +49,39 @@ void FrameBuffer :: dumpColorBufferToFile(char *name) {
 #include <windows.h>
 #include "gl.h"
 
-/* this function dumps the data array to the screen using glDrawPixels() */
+/* This function dumps the data array to the screen using glDrawPixels() */
 void FrameBuffer :: dumpToScreen(void) {
 	glDrawPixels(width, height, GL_RGB, GL_UNSIGNED_BYTE, color_buffer);
-
 	return;
 }
 
+/* Set the pixel color in the framebuffer */
+void FrameBuffer::setColorBuffer(int x, int y, int color[])
+{
+	int offset = ((y) * width + x) * 3;
+	color_buffer[offset  ] = 255;
+	color_buffer[offset+1] = 0;
+	color_buffer[offset+2] = 0;
 
+	//color_buffer += offset;
+	//*(color_buffer  ) = (GLubyte)255;
+	//*(color_buffer+1) = (GLubyte)0;
+	//*(color_buffer+2) = (GLubyte)0;
+	//color_buffer -= (offset);
+}
+
+/* Test buffer */
 void FrameBuffer::makeCheckImage(void) {
-	int sz = width * height * 3;
+	int h = height, w = width;
+	int sz = w * h * 3;
 	//printf("Size: %d\n", sizeof(u08) * width * height * 3);
 	int brush_size = 1;
 	int i = 0, j = 0, k = 0, c = 0;
-	for (i = 0; i < (width); i++) {
-		for (j = 0; j < (height); j++) {
+	for (i = 0; i < w; i++) {
+		for (j = 0; j < h; j++) {
 			for (k = 0; k < 3; k++) {
-				// c= ((((i & 0x8) == 0) ^ ((j & 0x8)) == 0)) * 255;
-				if (k == 0)
-					c = ((((i & 0x8) == 0) ^ ((j & 0x8)) == 0)) * 255;
+				if (k == 2)
+					c =  ((((i & 0x8) == 0) ^ ((j & 0x8)) == 0)) * 255;
 				else
 					c = 0;
 				*(color_buffer++) = (GLubyte)c;
