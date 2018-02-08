@@ -62,7 +62,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="SoftwareRenderer\FrameBuffer.cpp" />
     <ClCompile Include="SoftwareRenderer\mainMaze.cpp" />
     <ClCompile Include="SoftwareRenderer\Matrices.cpp" />
@@ -74,7 +73,6 @@
     <ClCompile Include="SoftwareRenderer\Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Matrix.h" />
     <ClInclude Include="SoftwareRenderer\FrameBuffer.h" />
     <ClInclude Include="SoftwareRenderer\gl.h" />
     <ClInclude Include="SoftwareRenderer\globals.h" />
@@ -93,6 +91,9 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="maze1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

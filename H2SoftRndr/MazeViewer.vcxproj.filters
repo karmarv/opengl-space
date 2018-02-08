@@ -42,9 +42,6 @@
     <ClCompile Include="SoftwareRenderer\Triangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Matrix.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SoftwareRenderer\Matrices.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -92,14 +89,14 @@
     <ClInclude Include="SoftwareRenderer\glut.h">
       <Filter>Header Files\OpenGL</Filter>
     </ClInclude>
-    <ClInclude Include="Matrix.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SoftwareRenderer\Matrices.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="maze1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
 </Project>

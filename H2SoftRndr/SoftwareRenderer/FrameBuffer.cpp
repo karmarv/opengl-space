@@ -32,7 +32,6 @@ void FrameBuffer :: dumpColorBufferToFile(char *name) {
 
 	image.Create(width, height, 24);
 
-
 	/* now copy color buffer to the CImage bit array */
 	copyColorBuffer(&image);
 
@@ -61,21 +60,20 @@ void FrameBuffer::clear(void) {
 }
 
 /* Set the pixel color in the framebuffer */
-void FrameBuffer::setColorBuffer(int x, int y, int color[])
-{
+void FrameBuffer::setColorBuffer(int x, int y, int color[]) {
 	if (y >= window_height || x >= window_width ||
 		y < 0 || x < 0) {
-		// Cannot set this buffer
+		// Cannot set this buffer, out of bound
 
 	}else{
 		int offset = ((y) * width + x) * 3;
-		color_buffer[offset  ] = 255;
-		color_buffer[offset+1] = 0;
-		color_buffer[offset+2] = 0;
+		color_buffer[offset  ] = color[0];
+		color_buffer[offset+1] = color[1];
+		color_buffer[offset+2] = color[2];
 	}
 }
 
-/* Test buffer */
+/* Test checkered buffer */
 void FrameBuffer::makeCheckImage(void) {
 	int h = height, w = width;
 	int sz = w * h * 3;

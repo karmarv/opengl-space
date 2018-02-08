@@ -89,13 +89,12 @@ class Triangle {
 		void renderOpenGL(void);
 
 		/* Software rendering */
-		void rasterizeTriangle(void);
+		void rasterizeTriangle(Matrix4 mvpMatrix, int id);
 		/* Triangle Inside test functions */
-		bool insideTriangle(int x, int y);
+		bool insideTriangle(int x, int y, Vertex vp[3]);
 		void lineEquation(Vertex *f, Vertex *vector1, Vertex *vector2);
 		float dotProduct(Vertex *v1, Vertex *v2);
 		void crossProduct(Vertex *result, Vertex *vector1, Vertex *vector2);
-		void mvpVertices(Matrix4 mvpMatrix);
 
 		/* for debugging */
 		void print(void) {
