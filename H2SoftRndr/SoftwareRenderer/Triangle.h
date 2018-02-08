@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <math.h>
 
+#include "Matrices.h"
 #include "Vertex.h"
 #include "FrameBuffer.h"
 #include "Texture.h"
@@ -94,6 +95,7 @@ class Triangle {
 		void lineEquation(Vertex *f, Vertex *vector1, Vertex *vector2);
 		float dotProduct(Vertex *v1, Vertex *v2);
 		void crossProduct(Vertex *result, Vertex *vector1, Vertex *vector2);
+		void mvpVertices(Matrix4 mvpMatrix);
 
 		/* for debugging */
 		void print(void) {

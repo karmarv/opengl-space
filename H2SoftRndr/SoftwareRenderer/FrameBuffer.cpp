@@ -55,19 +55,24 @@ void FrameBuffer :: dumpToScreen(void) {
 	return;
 }
 
+/* Clear the framebuffer */
+void FrameBuffer::clear(void) {
+	memset(color_buffer, 0, (sizeof(u08) * width * height * 3));
+}
+
 /* Set the pixel color in the framebuffer */
 void FrameBuffer::setColorBuffer(int x, int y, int color[])
 {
-	int offset = ((y) * width + x) * 3;
-	color_buffer[offset  ] = 255;
-	color_buffer[offset+1] = 0;
-	color_buffer[offset+2] = 0;
+	if (y >= window_height || x >= window_width ||
+		y < 0 || x < 0) {
+		// Cannot set this buffer
 
-	//color_buffer += offset;
-	//*(color_buffer  ) = (GLubyte)255;
-	//*(color_buffer+1) = (GLubyte)0;
-	//*(color_buffer+2) = (GLubyte)0;
-	//color_buffer -= (offset);
+	}else{
+		int offset = ((y) * width + x) * 3;
+		color_buffer[offset  ] = 255;
+		color_buffer[offset+1] = 0;
+		color_buffer[offset+2] = 0;
+	}
 }
 
 /* Test buffer */

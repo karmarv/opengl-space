@@ -37,6 +37,7 @@ class FrameBuffer {
 		void copyColorBuffer(CImage *image);
 		void dumpColorBufferToFile(char *name);
 		void dumpToScreen(void);
+		void clear(void);
 
 		// Draw functions
 		void setColorBuffer(int x, int y, int color[]);

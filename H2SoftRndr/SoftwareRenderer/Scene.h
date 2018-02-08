@@ -25,6 +25,8 @@ class Scene {
 		TriangleList *original_head;
 		TriangleList *original_tail;
 
+
+
 	public:
 		Scene() {
 			original_head = NULL;		original_tail = NULL;
@@ -144,11 +146,25 @@ class Scene {
 			glEnable(GL_DEPTH_TEST);
 
 			/* now render the triangles in the list */
+			/*
 			for (ptr = original_head; ptr;) {
 				ptr->t->renderOpenGL();
 				ptr = ptr->next;
-			}
-			
+			}*/
+			// Lets draw a fixed triangle 
+			Vertex v1_test = { 0.0f,0.0f,1.0f,1.0f };
+			Vertex v2_test = { 1.0f,1.0f,1.0f,1.0f };
+			Vertex v3_test = { 0.0f,1.0f,1.0f,1.0f };
+
+			glBegin(GL_TRIANGLES);
+				glColor3f(255,0,0);
+				glVertex3f(v1_test.x, v1_test.y, v1_test.z);
+				glColor3f(0, 255, 0); 
+				glVertex3f(v2_test.x, v2_test.y, v2_test.z);
+				glColor3f(0, 0, 255);
+				glVertex3f(v3_test.x, v3_test.y, v3_test.z);
+			glEnd();
+
 			glDisable(GL_DEPTH_TEST);
 
 			return;

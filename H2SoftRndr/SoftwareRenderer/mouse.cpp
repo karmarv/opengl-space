@@ -72,6 +72,9 @@ void computeProjectionMatrix(void) {
 					   (double)window_width/(double)window_height, /* aspect ratio */
 						0.1,		/* near plane */
 						700);		/* far plane */
+
+		GLfloat matrix[16];
+		glGetFloatv(GL_PROJECTION_MATRIX, matrix);
 	}
 	else {
 		/* software rendering mode */
@@ -79,35 +82,48 @@ void computeProjectionMatrix(void) {
 								(double)window_width/(double)window_height, /* aspect ratio */
 								 0.1, 700);
 	}
-
 	return;
 }
 
 /* this function establishes the modelview matrix using either openGL calls or
    software calls which you will fill in */
 void computeModelViewMatrix(void) {
+
+	// TODO: Fixing eye position
+	//eye_phi = 20; eye_theta = 45;
+	//eye_pos[0] = 10; eye_pos[1] = 0; eye_pos[2] = 10;
+	GLfloat matrix[16];
+
 	if (opengl_test) {
 		/* openGL mode */
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
-		
 		/* now rotate by phi */
  		glRotatef(-eye_phi, 1, 0, 0);
+		glGetFloatv(GL_MODELVIEW_MATRIX, matrix);
 
 		/* now rotate by theta */
 		glRotatef(-eye_theta, 0, 0, 1);
-		
+		glGetFloatv(GL_MODELVIEW_MATRIX, matrix);
+
 		/* translate to get the eye origin in the center of the coordinate system */
 		glTranslatef(-eye_pos[0], -eye_pos[1], -eye_pos[2]);
+		glGetFloatv(GL_MODELVIEW_MATRIX, matrix);
+		//printMatrix(matrix);
 	}
 	else {
-
 		/* software rendering mode */
 		setModelviewMatrix(eye_pos, eye_theta, eye_phi);
-
 	}
 
 	return;
+}
+
+void printMatrix(GLfloat matrix[16]) {
+	printf("Modelview Mat: \n");
+	for (int i = 0; i < 16;i++ ) {
+		printf("%f ", matrix[i]);
+	}
 }
 
 
