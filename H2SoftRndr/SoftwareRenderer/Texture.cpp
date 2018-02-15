@@ -95,3 +95,5 @@ void Texture :: switchTextureFiltering(bool flag) {
 
 	return;
 }
+
+

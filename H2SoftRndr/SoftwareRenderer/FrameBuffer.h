@@ -12,7 +12,8 @@ class FrameBuffer {
 
 		/* all the buffers are defined from the lower left corner of the screen */
 		u08 *color_buffer;		/* color buffer is unsigned bytes buffer size 3*w*h */
-		// ??? Z Buffer 
+		// ??? Z Buffer to hold the depth values 
+		int *depth_buffer;
 
 	public:
 		/* constructor */
@@ -21,6 +22,7 @@ class FrameBuffer {
 
 			/* allocate the buffer */
 			color_buffer = (u08 *)malloc(sizeof(u08) * width * height * 3);			 
+			depth_buffer = (int *)malloc(sizeof(int) * width * height);
 		};
 
 		/* destructor */
@@ -40,7 +42,7 @@ class FrameBuffer {
 		void clear(void);
 
 		// Draw functions
-		void setColorBuffer(int x, int y, int color[]);
+		void setColorBuffer(int x, int y, int z, float color[]);
 		void makeCheckImage(void);
 
 };

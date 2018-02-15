@@ -26,5 +26,5 @@ Open the solution HSolGL.sln in Visual Studio 2017 Community edition
 	- Provides a few animated programs to illustrate OpenGL functions, such as gluLookAt. 
 	- Nate Robin also provides the original GLUT library.
 5. Lighthouse 3D tutorials @ http://www.lighthouse3d.com
-
+6. Matrix Transformation @ https://www.3dgep.com/understanding-the-view-matrix/
 -------------------------------------

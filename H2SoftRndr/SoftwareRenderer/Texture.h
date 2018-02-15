@@ -26,19 +26,14 @@
    can be textured in our software renderer */
 class Texture {
 	private:
-		int width, height;	/* width and height for the texture */
+		
 		u08 *data;			/* contains the color data for the texture */
 
 		/* for opengl only */
 		GLuint	tex;		/* handle to opengl texture (only used by opengl */
 		void copyTextureData(CImage *image); 
 
-		void getFloatColor(int u, int v, float *color) {
-			u08 *ptr = data + (((v * width) + u) * 3); 
-			color[0] = (float) *(ptr);
-			color[1] = (float) *(ptr + 1);
-			color[2] = (float) *(ptr + 2);
-		}
+
 
 	public:
 		/* constructor takes the name of the file to use as a texture */
@@ -49,7 +44,7 @@ class Texture {
 			if (data)
 				free(data);
 		};
-
+		int width, height;	/* width and height for the texture */
 		
 		/* switches between nearest neighbor and bilinear interpolation */
 		void switchTextureFiltering(bool flag);
@@ -65,6 +60,20 @@ class Texture {
 			glDisable(GL_TEXTURE_2D);
 		};
 
+		void getFloatColor(int u, int v, float *color) {
+			if (v >= height || u >= width ||
+				v < 0 || u < 0) {
+				// Cannot, out of bound
+				printf("Tex Map: buff out of bound");
+			}else{
+				u08 *ptr = data + (((v * width) + u) * 3);
+				color[0] = (float) *(ptr);
+				color[1] = (float) *(ptr + 1);
+				color[2] = (float) *(ptr + 2);
+			}
+		}
+
+	
 };
 
 #endif		/* TEXTURE_H */

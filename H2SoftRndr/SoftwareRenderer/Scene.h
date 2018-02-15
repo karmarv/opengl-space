@@ -137,6 +137,73 @@ class Scene {
 			addTriangle(&original_head, &original_tail, t2);
 		};
 
+		/* Test with static triangles */
+		void testRenderSceneOpenGL(void) {
+
+			Texture ** tx = (Texture **)malloc(sizeof(Texture*) * 3);
+			
+			tx[0] = new Texture("wall1.tif");
+			tx[1] = new Texture("wall4.tif");
+			tx[2] = new Texture("wall6.tif");
+
+			// Lets draw a fixed test triangle 
+			Vertex v1_t = { -80.0f,80.0f,0.0f,1.0f };
+			Vertex v2_t = { -70.0f,80.0f,0.0f,1.0f };
+			Vertex v3_t = { -70.0f,80.0f,20.0f,1.0f };
+			
+			Triangle test(&v1_t, &v2_t, &v3_t);
+			test.setCoords(0, 0, 0);
+			test.setCoords(1, 1, 1);
+			test.setCoords(2, 0, 1);
+			test.setColor(0, 0, 127, 0); // color[0] = (150 * id) % 255; // rand() %
+			test.setColor(1, 0, 255, 0);
+			test.setColor(2, 0, 32, 0);
+
+			test.setTexture(tx[0]);
+			test.renderOpenGL();
+
+			v1_t = { -60.0f,70.0f,20.0f,1.0f };
+			v2_t = { -65.0f,70.0f,20.0f,1.0f };
+			v3_t = { -65.0f,70.0f,0.0f,1.0f };
+			Triangle test0(&v1_t, &v2_t, &v3_t);
+			test0.setCoords(0, 1, 1);
+			test0.setCoords(1, 0, 1);
+			test0.setCoords(2, 0, 0);
+			test0.setColor(0, 0, 0, 127);
+			test0.setColor(1, 0, 0, 255);
+			test0.setColor(2, 0, 0, 32);
+			test0.setTexture(tx[1]);
+			test0.renderOpenGL();
+
+			v1_t = { -70.0f,80.0f,10.0f,1.0f };
+			v2_t = { -80.0f,80.0f,10.0f,1.0f };
+			v3_t = { -80.0f,80.0f,0.0f,1.0f };
+			Triangle test1(&v1_t, &v2_t, &v3_t);
+			test1.setCoords(0, 0, 0);
+			test1.setCoords(1, 1, 1);
+			test1.setCoords(2, 0, 1);
+			test1.setColor(0, 127, 0, 0);
+			test1.setColor(1, 255, 0, 0);
+			test1.setColor(2, 32, 0, 0);
+			test1.setTexture(tx[2]);
+			test1.renderOpenGL();
+
+			v1_t = { 0.0f,0.0f,1.0f,1.0f };
+			v2_t = { 1.0f,1.0f,1.0f,1.0f };
+			v3_t = { 0.0f,1.0f,1.0f,1.0f };
+			Triangle test3(&v1_t, &v2_t, &v3_t);
+			test3.setCoords(0, 0, 0);
+			test3.setCoords(1, 1, 1);
+			test3.setCoords(2, 0, 1);
+			test3.setColor(0, 255, 0, 0);
+			test3.setColor(1, 0, 255, 0);
+			test3.setColor(2, 0, 0, 255);
+			//test3.setTexture(tx[1]);
+			test3.renderOpenGL();
+
+
+		}
+
 		void renderSceneOpenGL(void) {
 			TriangleList *ptr;
 
@@ -145,18 +212,26 @@ class Scene {
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 			glEnable(GL_DEPTH_TEST);
 
-			/* now render the triangles in the list */
+#ifdef DEBUG
+			/* Test static triangles */
+			testRenderSceneOpenGL();
+#endif // DEBUG
+
+#ifndef DEBUG
+			/* now render the triangles in the list  */
 			int count=0;
 			for (ptr = original_head; ptr;) {
 				count++;
 				ptr->t->renderOpenGL();
 				ptr = ptr->next;
 			}
+#endif // !DEBUG
 			glDisable(GL_DEPTH_TEST);
 
 			return;
 		};	
 
+		void testRenderSceneSoftware(void);
 		void renderSceneSoftware(void);
 };
 

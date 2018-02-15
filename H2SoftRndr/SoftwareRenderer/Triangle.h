@@ -9,6 +9,8 @@
 #include "FrameBuffer.h"
 #include "Texture.h"
 
+//#define DEBUG
+
 /* implements the triangle class */
 class Triangle {
 	private:
@@ -90,11 +92,17 @@ class Triangle {
 
 		/* Software rendering */
 		void rasterizeTriangle(Matrix4 mvpMatrix, int id);
+
 		/* Triangle Inside test functions */
-		bool insideTriangle(int x, int y, Vertex vp[3]);
+		bool insideTriangle(Vertex p, Vertex vp[3]);
+		float getArea(Vertex v0, Vertex v1, Vertex v2);
 		void lineEquation(Vertex *f, Vertex *vector1, Vertex *vector2);
 		float dotProduct(Vertex *v1, Vertex *v2);
 		void crossProduct(Vertex *result, Vertex *vector1, Vertex *vector2);
+
+		/* Interpolation function */
+		Vector3 getColorInterpolation(Vertex p, Vertex vp[3], float Ai, Vertex w);
+		Vector3 getTexInterpolation(Vertex p, Vertex vtx[3], float Ati, Vertex vp[3], float Ai, Vertex w);
 
 		/* for debugging */
 		void print(void) {
