@@ -80,7 +80,8 @@ void computeProjectionMatrix(void) {
 		/* software rendering mode */
 		setPerspectiveProjection(eye_fov, /* field of view in degree */
 								(double)window_width/(double)window_height, /* aspect ratio */
-								 0.1, 700);
+								0.1,		/* near plane */
+								700);		/* far plane */
 	}
 	return;
 }

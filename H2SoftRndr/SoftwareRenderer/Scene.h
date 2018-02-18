@@ -212,12 +212,12 @@ class Scene {
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 			glEnable(GL_DEPTH_TEST);
 
-#ifdef DEBUG
+#ifdef DEBUG_TEST
 			/* Test static triangles */
 			testRenderSceneOpenGL();
-#endif // DEBUG
+#endif // DEBUG_TEST
 
-#ifndef DEBUG
+#ifndef DEBUG_TEST
 			/* now render the triangles in the list  */
 			int count=0;
 			for (ptr = original_head; ptr;) {
@@ -225,7 +225,7 @@ class Scene {
 				ptr->t->renderOpenGL();
 				ptr = ptr->next;
 			}
-#endif // !DEBUG
+#endif // !DEBUG_TEST
 			glDisable(GL_DEPTH_TEST);
 
 			return;

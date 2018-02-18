@@ -36,14 +36,14 @@ Matrix4 setFrustum(float fovY, float aspect, float front, float back)
 	return setFrustum(-width, width, -height, height, front, back);
 }
 
-/* set the perspective projection matrix given the following values */
+/* Projection: set the perspective projection matrix for obtaining clip coordinates with modelview */
 void setPerspectiveProjection(float eye_fov, float aspect_ratio, float front, float back) {
 	P.identity();
 	P = setFrustum(eye_fov, aspect_ratio, front, back);
 }
 
 
-/* set the modelview matrix with the given parameters */
+/* Modelview: set the modelview matrix with the given parameters for eye coordinate */
 void setModelviewMatrix(float *eye_pos, float eye_theta, float eye_phi) {
 	/* Matrix v′ = (T(R(Sv))) This transformation can be stated in words,
 		as “first scale, then rotate, then translate”.
@@ -62,7 +62,7 @@ void setModelviewMatrix(float *eye_pos, float eye_theta, float eye_phi) {
 	2. The vertex coordinate should be in homogeneous coordinates for MVP computation.
 */
 void Scene::testRenderSceneSoftware(void){
-	/* Final View Matrix */
+	/* Clip Coordinates: Final View Matrix */
 	Matrix4 mvpMatrix = P * M;
 
 	Texture ** tx = (Texture **)malloc(sizeof(Texture*) * 4);
@@ -72,7 +72,7 @@ void Scene::testRenderSceneSoftware(void){
 	tx[2] = new Texture("wall6.tif");
 	tx[3] = new Texture("monaLisa.tif");
 
-	// Lets draw a fixed test triangle 
+	// Lets set the triangles object coordinates in world space 
 	Vertex v1_t = { -80.0f,80.0f,0.0f,1.0f };
 	Vertex v2_t = { -70.0f,70.0f,0.0f,1.0f };
 	Vertex v3_t = { -70.0f,60.0f,20.0f,1.0f };
@@ -107,7 +107,7 @@ void Scene::testRenderSceneSoftware(void){
 	test1.setCoords(0, 0, 0);
 	test1.setCoords(1, 1, 1);
 	test1.setCoords(2, 0, 1);
-	test1.setTexture(tx[2]);
+	//test1.setTexture(tx[2]);
 	test1.setColor(0, 0, 0, 127);
 	test1.setColor(1, 255, 0, 0);
 	test1.setColor(2, 0 , 0, 127);
@@ -167,14 +167,14 @@ void Scene :: renderSceneSoftware(void) {
 	/* Final View Matrix */
 	Matrix4 mvpMatrix = P * M;
 
-#ifdef DEBUG
+#ifdef DEBUG_TEST
 
 	/*Test with static triangles */
 	testRenderSceneSoftware();
 
-#endif // DEBUG
+#endif // DEBUG_TEST
 
-#ifndef DEBUG
+#ifndef DEBUG_TEST
 	int count = 0;
 	TriangleList *ptr;
 	/* now render the triangles in the list */
@@ -185,7 +185,7 @@ void Scene :: renderSceneSoftware(void) {
 		//if (count > 45)
 		//	break;
 	}
-#endif // !DEBUG
+#endif // !DEBUG_TEST
 
 	
 	return;
