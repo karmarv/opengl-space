@@ -71,12 +71,12 @@ void FrameBuffer::setColorBuffer(int x, int y, int z, float color[]) {
 		printf("Frame Buf: buff out of bound");
 
 	}else{
+		// Check for the z order
 		if (z < depth_buffer[(y*width + x)]) {
 			int offset = ((y)* width + x) * 3;
 			color_buffer[offset] = color[0];
 			color_buffer[offset + 1] = color[1];
 			color_buffer[offset + 2] = color[2];
-
 			depth_buffer[(y*width + x)] = z;
 		}
 	}

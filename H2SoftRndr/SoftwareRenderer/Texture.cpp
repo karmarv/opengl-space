@@ -12,24 +12,18 @@ void Texture :: copyTextureData(CImage *image) {
 	int pitch = image->GetPitch();
 	u08 *ptr_src = (u08 *)image->GetBits();
 	u08 *ptr_dst = data + (height - 1) * width * 3 ;
-
-
 	/* note that CImage is upside down, so we start reading the framebuffer
 	   from the top of the screen */
-
 	for (j = 0; j < height; j++) {
 		for (i = 0; i < width; i++) {
 			*(ptr_dst++) = *(ptr_src + 2);
 			*(ptr_dst++) = *(ptr_src + 1);
 			*(ptr_dst++) = *(ptr_src);
-
 			ptr_src += 3;
 		}
-
 		ptr_dst += -(width * 3) * 2;
 		ptr_src += pitch - (width * 3); 
 	}
-
 	return;
 }
 

@@ -41,6 +41,8 @@ int Triangle::getScreenCoordinates(Matrix4 mvpMatrix, Vertex *vsc) {
 	Vector4 vp2 = mvpMatrix * vc2;
 	Vector4 vp3 = mvpMatrix * vc3;
 
+	/* Screen Clipping */
+
 	/* Normalized Device Coordinates (NDC) */
 	vsc[3].set(1.0 / vp1.w, 1.0 / vp2.w, 1.0 / vp3.w); // Keeping the precomputed 1/W perspective divide values
 	vsc[0].set(vp1.x * vsc[3].x, vp1.y * vsc[3].x, vp1.z * vsc[3].x);
@@ -48,9 +50,11 @@ int Triangle::getScreenCoordinates(Matrix4 mvpMatrix, Vertex *vsc) {
 	vsc[2].set(vp3.x * vsc[3].z, vp3.y * vsc[3].z, vp3.z * vsc[3].z);
 
 	// If not in canonical form then return (clipping out the triangles on floor)
-	if (!((-1 <= vsc[0].x) && (vsc[0].x <= 1) && (-1 <= vsc[0].y) && (vsc[0].y <= 1) &&
-		(-1 <= vsc[1].x) && (vsc[1].x <= 1) && (-1 <= vsc[1].y) && (vsc[1].y <= 1) &&
-		(-1 <= vsc[2].x) && (vsc[2].x <= 1) && (-1 <= vsc[2].y) && (vsc[2].y <= 1))) {
+	if (!(
+		(-1 <= vsc[0].x) && (vsc[0].x <= 1) && (-1 <= vsc[0].y) && (vsc[0].y <= 1) && (-1 <= vsc[0].z) && (vsc[0].z <= 1) &&
+		(-1 <= vsc[1].x) && (vsc[1].x <= 1) && (-1 <= vsc[1].y) && (vsc[1].y <= 1) && (-1 <= vsc[1].z) && (vsc[1].z <= 1) &&
+		(-1 <= vsc[2].x) && (vsc[2].x <= 1) && (-1 <= vsc[2].y) && (vsc[2].y <= 1) && (-1 <= vsc[2].z) && (vsc[2].z <= 1)
+		)) {
 		return 0;
 	}
 
@@ -65,9 +69,9 @@ int Triangle::getScreenCoordinates(Matrix4 mvpMatrix, Vertex *vsc) {
 	// TODO: Unable to use this as it clips all rect to triangles
 	float vpz1 = (700 - 0.1) / 2;
 	float vpz2 = (700 + 0.1) / 2;
-	//vsc[0].z = vsc[0].z * vpz1 + vpz2;
-	//vsc[1].z = vsc[1].z * vpz1 + vpz2;
-	//vsc[2].z = vsc[2].z * vpz1 + vpz2;
+	vsc[0].z = vsc[0].z * vpz1 + vpz2;
+	vsc[1].z = vsc[1].z * vpz1 + vpz2;
+	vsc[2].z = vsc[2].z * vpz1 + vpz2;
 	
 }
 
@@ -137,6 +141,7 @@ Vector3 Triangle::getTexInterpolation(Vertex p, Vertex vp[4], float Ai) {
 	pxy.z /= wp;
  	return pxy;
 }
+
 /* Color interpolation using Barymetric coordinates */
 Vector3 Triangle::getColorInterpolation(Vertex p, Vertex vp[4], float Ai) {
 	Vector3 color(0,0,0);
@@ -179,19 +184,25 @@ bool Triangle::insideTriangle(Vertex p, Vertex vp[3]) {
 	lineEquation(&f0, &vp[0], &vp[1]);
 	lineEquation(&f1, &vp[1], &vp[2]);
 	lineEquation(&f2, &vp[2], &vp[0]);
-	vp[0].z = z1;
-	vp[1].z = z2;
-	vp[2].z = z3;
+
 	if ((dotProduct(&p, &f0) * dotProduct(&f0, &vp[2]) > 0) &&
 		(dotProduct(&p, &f1) * dotProduct(&f1, &vp[0]) > 0) &&
 		(dotProduct(&p, &f2) * dotProduct(&f2, &vp[1]) > 0)) {
 		// Inside the triangle 
+		vp[0].z = z1;
+		vp[1].z = z2;
+		vp[2].z = z3;
 		return true;
 	}
+	vp[0].z = z1;
+	vp[1].z = z2;
+	vp[2].z = z3;
 	return false;
 }
 
-/* Fetch the area of this triangle  */
+/* Fetch the area of this triangle  
+   Area = (v1.x - v0.x)*(v2.y - v0.y) - (v2.x - v0.x)*(v1.y - v0.y)
+ */
 float Triangle::getArea(Vertex v0, Vertex v1, Vertex v2) {
 	// Obtain the area by cross product, we can drop the divide since this is used for ratios
 	double dArea = ((v1.x - v0.x)*(v2.y - v0.y) - (v2.x - v0.x)*(v1.y - v0.y)) ; // / 2.0 
