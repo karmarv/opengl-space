@@ -12,7 +12,7 @@ class FrameBuffer {
 
 		/* all the buffers are defined from the lower left corner of the screen */
 		u08 *color_buffer;		/* color buffer is unsigned bytes buffer size 3*w*h */
-		// ??? Z Buffer to hold the depth values 
+		// Z Buffer to hold the depth values 
 		int *depth_buffer;
 
 	public:

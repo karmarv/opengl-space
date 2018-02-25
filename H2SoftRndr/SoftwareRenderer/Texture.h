@@ -64,7 +64,7 @@ class Texture {
 			if (v >= height || u >= width ||
 				v < 0 || u < 0) {
 				// Cannot, out of bound
-				printf("Tex Map: buff out of bound");
+				//printf("Tex Map: buff out of bound");
 			}else{
 				u08 *ptr = data + (((v * width) + u) * 3);
 				color[0] = (float) *(ptr);

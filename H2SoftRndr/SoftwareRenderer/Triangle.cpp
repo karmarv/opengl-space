@@ -26,12 +26,11 @@ void Triangle :: renderOpenGL(void) {
 	if (tex) {
 		tex->release();
 	}
-
 	return;
 }
 
-/* Get projected screen coordinates from world coordinates */
-int Triangle::getScreenCoordinates(Matrix4 mvpMatrix, Vertex *vsc) {
+/* Set the model view transformed vertices */
+void Triangle::modelViewTransformVertices(Matrix4 mvpMatrix) {
 	// Vertex Vectors
 	Vector4 vc1(v[0].x, v[0].y, v[0].z, v[0].w);
 	Vector4 vc2(v[1].x, v[1].y, v[1].z, v[1].w);
@@ -40,8 +39,14 @@ int Triangle::getScreenCoordinates(Matrix4 mvpMatrix, Vertex *vsc) {
 	Vector4 vp1 = mvpMatrix * vc1;
 	Vector4 vp2 = mvpMatrix * vc2;
 	Vector4 vp3 = mvpMatrix * vc3;
+	// Setup your MVP transformed vertices
+	pv[0].x = vp1.x; pv[0].y = vp1.y; pv[0].z = vp1.z; pv[0].w = vp1.w;
+	pv[1].x = vp2.x; pv[1].y = vp2.y; pv[1].z = vp2.z; pv[1].w = vp2.w;
+	pv[2].x = vp3.x; pv[2].y = vp3.y; pv[2].z = vp3.z; pv[2].w = vp3.w;
+}
 
-	/* Screen Clipping */
+/* Get projected screen coordinates from world coordinates */
+int Triangle::getScreenCoordinates(Vector4 vp1, Vector4 vp2, Vector4 vp3, Vertex *vsc) {
 
 	/* Normalized Device Coordinates (NDC) */
 	vsc[3].set(1.0 / vp1.w, 1.0 / vp2.w, 1.0 / vp3.w); // Keeping the precomputed 1/W perspective divide values
@@ -49,7 +54,7 @@ int Triangle::getScreenCoordinates(Matrix4 mvpMatrix, Vertex *vsc) {
 	vsc[1].set(vp2.x * vsc[3].y, vp2.y * vsc[3].y, vp2.z * vsc[3].y);
 	vsc[2].set(vp3.x * vsc[3].z, vp3.y * vsc[3].z, vp3.z * vsc[3].z);
 
-	// If not in canonical form then return (clipping out the triangles on floor)
+	// If not in canonical form then return (culling out the entire triangle)
 	if (!(
 		(-1 <= vsc[0].x) && (vsc[0].x <= 1) && (-1 <= vsc[0].y) && (vsc[0].y <= 1) && (-1 <= vsc[0].z) && (vsc[0].z <= 1) &&
 		(-1 <= vsc[1].x) && (vsc[1].x <= 1) && (-1 <= vsc[1].y) && (vsc[1].y <= 1) && (-1 <= vsc[1].z) && (vsc[1].z <= 1) &&
@@ -72,14 +77,31 @@ int Triangle::getScreenCoordinates(Matrix4 mvpMatrix, Vertex *vsc) {
 	vsc[0].z = vsc[0].z * vpz1 + vpz2;
 	vsc[1].z = vsc[1].z * vpz1 + vpz2;
 	vsc[2].z = vsc[2].z * vpz1 + vpz2;
-	
+	return 1;
 }
 
 /* Draw triangles in the frame buffer */
-void Triangle::rasterizeTriangle(Matrix4 mvpMatrix, int id) {
+void Triangle::rasterizeTriangle() {
 	Vertex vsc[4];
+	
+	// Vertex Vectors, already projected via the scene clipping
+	Vector4 vp1(pv[0].x, pv[0].y, pv[0].z, pv[0].w);
+	Vector4 vp2(pv[1].x, pv[1].y, pv[1].z, pv[1].w);
+	Vector4 vp3(pv[2].x, pv[2].y, pv[2].z, pv[2].w);
+
+	/*
+	// Vertex Vectors
+	Vector4 vc1(v[0].x, v[0].y, v[0].z, v[0].w);
+	Vector4 vc2(v[1].x, v[1].y, v[1].z, v[1].w);
+	Vector4 vc3(v[2].x, v[2].y, v[2].z, v[2].w);
+	// Projecting the Vertices
+	Vector4 vp1 = mvpMatrix * vc1;
+	Vector4 vp2 = mvpMatrix * vc2;
+	Vector4 vp3 = mvpMatrix * vc3;
+	*/
+
 	// Get screen coordinates
-	if (!getScreenCoordinates(mvpMatrix, vsc))
+	if (!getScreenCoordinates(vp1, vp2, vp3, vsc))
 		return;
 	// Find the bounding box for the triangle
 	float y_min = vsc[0].y, y_max = vsc[0].y,	x_min = vsc[0].x, x_max = vsc[0].x;
@@ -101,9 +123,11 @@ void Triangle::rasterizeTriangle(Matrix4 mvpMatrix, int id) {
 			p.x = x;
 			p.y = y;
 			if (insideTriangle(p, vsc)) {
-				if(tex){
+				if(tex != NULL){
 					// Per pixel interpolation based on Barycentric coordinates 
 					pxy = getTexInterpolation(p, vsc, Ai);
+					//if ((pxy.x == 0) && (pxy.y == 0) && (pxy.z == 0))
+					//	continue;
 					// Map the texture 
 					tex->getFloatColor(pxy.x, pxy.y, color); 
 					fb.setColorBuffer(x, y, pxy.z, color);
@@ -132,6 +156,8 @@ Vector3 Triangle::getTexInterpolation(Vertex p, Vertex vp[4], float Ai) {
 	float A1 = getArea(p, vp[2], vp[0]);
 	float A2 = getArea(p, vp[0], vp[1]);
 	float wp = (A0 *Ai) * (vp[3].x) + (A1 *Ai) * (vp[3].y) + (A2 * Ai) * (vp[3].z);
+	if (wp == 0)
+		return pxy;
 	// Perspective correct texture interpolation based on Barycentric coordinates 
 	pxy.x = tex->width  * ((A0 * Ai) * (vtx[0].x * vp[3].x) + (A1 * Ai) * (vtx[1].x * vp[3].y) + (A2 * Ai) * (vtx[2].x * vp[3].z)); // Px
 	pxy.y = tex->height * ((A0 * Ai) * (vtx[0].y * vp[3].x) + (A1 * Ai) * (vtx[1].y * vp[3].y) + (A2 * Ai) * (vtx[2].y * vp[3].z)); // Py

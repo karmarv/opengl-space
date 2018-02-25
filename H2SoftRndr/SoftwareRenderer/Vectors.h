@@ -522,6 +522,8 @@ inline float Vector4::dot(const Vector4& rhs) const {
     return (x*rhs.x + y*rhs.y + z*rhs.z + w*rhs.w);
 }
 
+
+
 inline bool Vector4::equal(const Vector4& rhs, float epsilon) const {
     return fabs(x - rhs.x) < epsilon && fabs(y - rhs.y) < epsilon &&
            fabs(z - rhs.z) < epsilon && fabs(w - rhs.w) < epsilon;

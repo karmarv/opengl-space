@@ -56,7 +56,7 @@ void FrameBuffer :: dumpToScreen(void) {
 
 /* Clear the framebuffer */
 void FrameBuffer::clear(void) {
-	memset(color_buffer, 0, (sizeof(u08) * width * height * 3));
+	memset(color_buffer, 255, (sizeof(u08) * width * height * 3));
 	//memset(depth_buffer, 65536, (sizeof(int) * width * height));
 	for (int i = 0; i < width * height; i++) {
 		*(depth_buffer+i) = INT_MAX;
@@ -68,7 +68,7 @@ void FrameBuffer::setColorBuffer(int x, int y, int z, float color[]) {
 	if (y >= window_height || x >= window_width ||
 		y < 0 || x < 0) {
 		// Cannot set this buffer, out of bound
-		printf("Frame Buf: buff out of bound");
+		//printf("Frame Buf: buff out of bound");
 
 	}else{
 		// Check for the z order

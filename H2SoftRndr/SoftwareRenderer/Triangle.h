@@ -11,24 +11,30 @@
 
 //#define DEBUG_TEST
 
+
 /* implements the triangle class */
 class Triangle {
 	private:
+	public:
 		Vertex v[3];		/* the original vertices of the triangle */
-
-		/* per-vertex values */
+		Vertex pv[3];		/* the perspective transformed vertices of the triangle */
+							/* per-vertex values */
 		float c[3][3];		/* color at each vertex */
 		float coords[3][2];
 
 		/* point to the texture that is bound, if any */
 		Texture *tex;
 
-	public:
+
 		/* constructors */
 		Triangle() {
 			v[0].set(0, 0, 0);
 			v[1].set(0, 0, 0);
 			v[2].set(0, 0, 0);
+
+			pv[0].set(0, 0, 0);
+			pv[1].set(0, 0, 0);
+			pv[2].set(0, 0, 0);
 
 			c[0][0] = 0.0;	c[0][1] = 0.0;	c[0][2] = 0.0;
 			c[1][0] = 0.0;	c[1][1] = 0.0;	c[1][2] = 0.0;
@@ -39,12 +45,17 @@ class Triangle {
 			coords[2][0] = 0.0;		coords[2][1] = 0.0;
 
 			tex = NULL;
+
 		};
 
 		Triangle(Vertex *v0, Vertex *v1, Vertex *v2) {
 			v[0] = (*v0);
 			v[1] = (*v1);
 			v[2] = (*v2);
+
+			pv[0] = (*v0);
+			pv[1] = (*v1);
+			pv[2] = (*v2);
 
 			c[0][0] = 0.0;	c[0][1] = 0.0;	c[0][2] = 0.0;
 			c[1][0] = 0.0;	c[1][1] = 0.0;	c[1][2] = 0.0;
@@ -91,8 +102,10 @@ class Triangle {
 		void renderOpenGL(void);
 
 		/* Software rendering */
-		void rasterizeTriangle(Matrix4 mvpMatrix, int id);
-		int getScreenCoordinates(Matrix4 mvpMatrix, Vertex *vsc);
+		void rasterizeTriangle();
+		int getScreenCoordinates(Vector4 vp1, Vector4 vp2, Vector4 vp3, Vertex *vsc);
+		void modelViewTransformVertices(Matrix4 mvpMatrix);
+
 
 		/* Triangle Inside test functions */
 		bool insideTriangle(Vertex p, Vertex vp[3]);
