@@ -1,5 +1,5 @@
 // Local Headers
-#include "lights.hpp"
+#include "lightpts.hpp"
 
 
 // lighting
@@ -18,7 +18,7 @@ unsigned int diffuseMap = 0;
 unsigned int specularMap = 0;
 
 /* Vertices cube */
-GLfloat vertices[] = {
+GLfloat cubeVertices[] = {
     // positions          // normals           // texture coords
 	// Back face (pos x, y, z, normal x, y, z, tex coords x, y)
     -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  0.0f, 0.0f,  // Bottom-left
@@ -92,7 +92,7 @@ void SetupLightCube()
 	glGenBuffers(1, &VBO);
 	// Fill buffer
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), cubeVertices, GL_STATIC_DRAW);
 	// Link vertex attributes
 	glBindVertexArray(cubeVAO);
 	glEnableVertexAttribArray(0);

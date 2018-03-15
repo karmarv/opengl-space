@@ -1,6 +1,7 @@
 // Local Headers
 #include "glitter.hpp"
-#include "lights.hpp"
+#include "lightpts.hpp"
+#include "lightpoly.hpp"
 
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);

@@ -1,6 +1,5 @@
-
-#ifndef LIGHTS_H
-#define LIGHTS_H
+#ifndef LUTILS_H
+#define LUTILS_H
 #pragma once
 
 // System Headers
@@ -15,12 +14,11 @@
 #include <cstdlib>
 #include <shader.hpp>
 #include <filesystem.hpp>
-#include "blocks.hpp"
 
+//#define STB_IMAGE_IMPLEMENTATION
+#include <stb_image.h>
 
-
-void RenderLightCube(glm::mat4 projection, glm::mat4 view, glm::mat4 model, glm::vec3 cameraPos, glm::vec3 cameraFront);
-void SetupLightCube();
-void SetPointLights();
+void RenderBlock();
+unsigned int loadTexture(char const * path);
 
 #endif

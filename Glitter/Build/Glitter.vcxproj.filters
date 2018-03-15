@@ -19,10 +19,13 @@
     <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\stb_image_aug.c">
       <Filter>Vendors</Filter>
     </ClCompile>
-    <ClCompile Include="..\Glitter\Sources\blocks.cpp">
+    <ClCompile Include="..\Glitter\Sources\lutils.cpp">
       <Filter>Sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\Glitter\Sources\lights.cpp">
+    <ClCompile Include="..\Glitter\Sources\lightpoly.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Glitter\Sources\lightpts.cpp">
       <Filter>Sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -45,13 +48,16 @@
     <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\shader.hpp">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\Glitter\Sources\blocks.hpp">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Glitter\Sources\lights.hpp">
-      <Filter>Headers</Filter>
-    </ClInclude>
     <ClInclude Include="..\Glitter\Headers\stb_image.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Glitter\Sources\lutils.hpp">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Glitter\Sources\lightpoly.hpp">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Glitter\Sources\lightpts.hpp">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>

@@ -309,12 +309,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Glitter\Sources\blocks.cpp" />
-    <ClCompile Include="..\Glitter\Sources\lights.cpp" />
+    <ClCompile Include="..\Glitter\Sources\lightpoly.cpp" />
+    <ClCompile Include="..\Glitter\Sources\lutils.cpp" />
+    <ClCompile Include="..\Glitter\Sources\lightpts.cpp" />
     <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Sources\main.cpp" />
     <ClInclude Include="..\Glitter\Headers\stb_image.h" />
-    <ClInclude Include="..\Glitter\Sources\blocks.hpp" />
-    <ClInclude Include="..\Glitter\Sources\lights.hpp" />
+    <ClInclude Include="..\Glitter\Sources\lightpoly.hpp" />
+    <ClInclude Include="..\Glitter\Sources\lutils.hpp" />
+    <ClInclude Include="..\Glitter\Sources\lightpts.hpp" />
     <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\camera.hpp" />
     <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\filesystem.hpp" />
     <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\glitter.hpp" />
