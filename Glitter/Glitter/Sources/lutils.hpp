@@ -13,6 +13,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <shader.hpp>
+#include <camera.hpp>
 #include <filesystem.hpp>
 
 //#define STB_IMAGE_IMPLEMENTATION

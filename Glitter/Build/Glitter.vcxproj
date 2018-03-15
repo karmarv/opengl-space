@@ -329,6 +329,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <None Include="..\Glitter\Shaders\lamp.vert.glsl" />
     <None Include="..\Glitter\Shaders\lighting.frag.glsl" />
     <None Include="..\Glitter\Shaders\lighting.vert.glsl" />
+    <None Include="..\Glitter\Shaders\lightpoly.frag.glsl" />
+    <None Include="..\Glitter\Shaders\lightpoly.vert.glsl" />
     <None Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Readme.md" />
     <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\src\glad.c">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>

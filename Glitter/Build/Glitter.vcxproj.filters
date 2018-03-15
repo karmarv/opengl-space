@@ -72,6 +72,8 @@
     <None Include="..\Glitter\Shaders\lamp.vert.glsl" />
     <None Include="..\Glitter\Shaders\lighting.frag.glsl" />
     <None Include="..\Glitter\Shaders\lighting.vert.glsl" />
+    <None Include="..\Glitter\Shaders\lightpoly.frag.glsl" />
+    <None Include="..\Glitter\Shaders\lightpoly.vert.glsl" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
