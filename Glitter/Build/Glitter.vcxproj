@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B28DD0E7-D9A7-3A12-B32F-D9E885E2A0CA}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>Glitter</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Glitter.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Glitter</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Glitter.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Glitter</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Glitter.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Glitter</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Glitter.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Glitter</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glm;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;GLFW_INCLUDE_NONE;PROJECT_SOURCE_DIR="C:/Users/Karma/Documents/workspace/opengl-space/Glitter";CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;GLFW_INCLUDE_NONE;PROJECT_SOURCE_DIR=\"C:/Users/Karma/Documents/workspace/opengl-space/Glitter\";CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glm;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glm;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>lib\Debug\assimp-vc140-mt.lib;lib\Debug\glfw3.lib;opengl32.lib;glu32.lib;lib\Debug\BulletDynamics.lib;lib\Debug\BulletCollision.lib;lib\Debug\LinearMath.lib;lib\Debug\zlibstaticd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/Debug/Glitter.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/Glitter/Debug/Glitter.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glm;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLFW_INCLUDE_NONE;PROJECT_SOURCE_DIR="C:/Users/Karma/Documents/workspace/opengl-space/Glitter";CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLFW_INCLUDE_NONE;PROJECT_SOURCE_DIR=\"C:/Users/Karma/Documents/workspace/opengl-space/Glitter\";CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glm;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glm;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>lib\Release\assimp-vc140-mt.lib;lib\Release\glfw3.lib;opengl32.lib;glu32.lib;lib\Release\BulletDynamics.lib;lib\Release\BulletCollision.lib;lib\Release\LinearMath.lib;lib\Release\zlibstatic.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/Release/Glitter.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/Glitter/Release/Glitter.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glm;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLFW_INCLUDE_NONE;PROJECT_SOURCE_DIR="C:/Users/Karma/Documents/workspace/opengl-space/Glitter";CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLFW_INCLUDE_NONE;PROJECT_SOURCE_DIR=\"C:/Users/Karma/Documents/workspace/opengl-space/Glitter\";CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glm;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glm;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>lib\MinSizeRel\assimp-vc140-mt_MinsizeRel.lib;lib\MinSizeRel\glfw3_MinsizeRel.lib;opengl32.lib;glu32.lib;lib\MinSizeRel\BulletDynamics_MinsizeRel.lib;lib\MinSizeRel\BulletCollision_MinsizeRel.lib;lib\MinSizeRel\LinearMath_MinsizeRel.lib;lib\MinSizeRel\zlibstatic_MinsizeRel.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/MinSizeRel/Glitter.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/Glitter/MinSizeRel/Glitter.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glm;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLFW_INCLUDE_NONE;PROJECT_SOURCE_DIR="C:/Users/Karma/Documents/workspace/opengl-space/Glitter";CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLFW_INCLUDE_NONE;PROJECT_SOURCE_DIR=\"C:/Users/Karma/Documents/workspace/opengl-space/Glitter\";CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glm;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glm;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>lib\RelWithDebInfo\assimp-vc140-mt_RelWithDebugInfo.lib;lib\RelWithDebInfo\glfw3_RelWithDebugInfo.lib;opengl32.lib;glu32.lib;lib\RelWithDebInfo\BulletDynamics_RelWithDebugInfo.lib;lib\RelWithDebInfo\BulletCollision_RelWithDebugInfo.lib;lib\RelWithDebInfo\LinearMath_RelWithDebugInfo.lib;lib\RelWithDebInfo\zlibstatic_RelWithDebugInfo.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/RelWithDebInfo/Glitter.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/Glitter/RelWithDebInfo/Glitter.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Karma/Documents/workspace/opengl-space/Glitter -BC:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build --check-stamp-file C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\3.10.0-rc3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\3.10.0-rc3\CMakeCCompiler.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\3.10.0-rc3\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\3.10.0-rc3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Karma/Documents/workspace/opengl-space/Glitter -BC:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build --check-stamp-file C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\3.10.0-rc3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\3.10.0-rc3\CMakeCCompiler.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\3.10.0-rc3\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\3.10.0-rc3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Karma/Documents/workspace/opengl-space/Glitter -BC:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build --check-stamp-file C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\3.10.0-rc3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\3.10.0-rc3\CMakeCCompiler.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\3.10.0-rc3\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\3.10.0-rc3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Karma/Documents/workspace/opengl-space/Glitter -BC:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build --check-stamp-file C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\3.10.0-rc3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\3.10.0-rc3\CMakeCCompiler.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\3.10.0-rc3\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\3.10.0-rc3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Glitter\Sources\blocks.cpp" />
+    <ClCompile Include="..\Glitter\Sources\lights.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Sources\main.cpp" />
+    <ClInclude Include="..\Glitter\Headers\stb_image.h" />
+    <ClInclude Include="..\Glitter\Sources\blocks.hpp" />
+    <ClInclude Include="..\Glitter\Sources\lights.hpp" />
+    <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\camera.hpp" />
+    <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\filesystem.hpp" />
+    <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\glitter.hpp" />
+    <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\mesh.hpp" />
+    <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\model.hpp" />
+    <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\shader.hpp" />
+    <None Include="..\Glitter\Shaders\geometry.frag.glsl" />
+    <None Include="..\Glitter\Shaders\geometry.vert.glsl" />
+    <None Include="..\Glitter\Shaders\lamp.frag.glsl" />
+    <None Include="..\Glitter\Shaders\lamp.vert.glsl" />
+    <None Include="..\Glitter\Shaders\lighting.frag.glsl" />
+    <None Include="..\Glitter\Shaders\lighting.vert.glsl" />
+    <None Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Readme.md" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\src\glad.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\SOIL.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\image_DXT.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\image_helper.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\stb_image_aug.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\ZERO_CHECK.vcxproj">
+      <Project>{EAE32383-B796-38AB-8802-697713EACDFB}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\bullet\src\BulletCollision\BulletCollision.vcxproj">
+      <Project>{8F32FF2B-1644-3BA8-8978-AEFC541A1C3C}</Project>
+      <Name>BulletCollision</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\bullet\src\BulletDynamics\BulletDynamics.vcxproj">
+      <Project>{6FBA3D80-BECC-3467-9C16-24D6B0E39532}</Project>
+      <Name>BulletDynamics</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\bullet\src\LinearMath\LinearMath.vcxproj">
+      <Project>{A74944CC-DFDB-3A31-A79E-A6999A772B0A}</Project>
+      <Name>LinearMath</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\assimp\code\assimp.vcxproj">
+      <Project>{0EE8A034-EBA7-3A3B-9245-276551A494DA}</Project>
+      <Name>assimp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\glfw\src\glfw.vcxproj">
+      <Project>{B9F7202E-C682-3F7A-82D7-79A87C6BA40E}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\assimp\contrib\zlib\zlibstatic.vcxproj">
+      <Project>{65F371BB-D3BC-364B-A778-CE844D6BFABD}</Project>
+      <Name>zlibstatic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

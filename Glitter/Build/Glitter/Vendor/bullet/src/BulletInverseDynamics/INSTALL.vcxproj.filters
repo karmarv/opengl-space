@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\b3c144bee36f4262915dcdf5d5a70ea7\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{7A9749DC-8D10-3B48-BEB8-7032785CC2DF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

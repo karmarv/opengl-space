@@ -1,0 +1,23 @@
+# CMake generation dependency list for this directory.
+C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/CMakeLists.txt
+C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/revision.h.in
+C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/include/assimp/config.h.in
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPkgConfig.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageMessage.cmake
+C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/cmake-modules/PrecompiledHeader.cmake
+C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/assimp-config.cmake.in
+C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/assimp-config-version.cmake.in
+C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/cmake-modules/FindDirectX.cmake
+C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/cmake-modules/FindPkgMacros.cmake
+C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/cmake-modules/FindZLIB.cmake
+C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/cmake-modules/FindPkgMacros.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPkgConfig.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/CheckTypeSize.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/CheckIncludeFileCXX.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/CheckFunctionExists.cmake
+C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/assimp.pc.in

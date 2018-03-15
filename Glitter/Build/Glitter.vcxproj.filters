@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Sources\main.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\src\glad.c">
+      <Filter>Vendors</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\SOIL.c">
+      <Filter>Vendors</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\image_DXT.c">
+      <Filter>Vendors</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\image_helper.c">
+      <Filter>Vendors</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\stb_image_aug.c">
+      <Filter>Vendors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Glitter\Sources\blocks.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Glitter\Sources\lights.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\camera.hpp">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\filesystem.hpp">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\glitter.hpp">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\mesh.hpp">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\model.hpp">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\shader.hpp">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Glitter\Sources\blocks.hpp">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Glitter\Sources\lights.hpp">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Glitter\Headers\stb_image.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Readme.md" />
+    <None Include="..\Glitter\Shaders\geometry.frag.glsl" />
+    <None Include="..\Glitter\Shaders\geometry.vert.glsl" />
+    <None Include="..\Glitter\Shaders\lamp.frag.glsl" />
+    <None Include="..\Glitter\Shaders\lamp.vert.glsl" />
+    <None Include="..\Glitter\Shaders\lighting.frag.glsl" />
+    <None Include="..\Glitter\Shaders\lighting.vert.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{0BFD9249-4869-3DCD-AEB7-346CB80B8B32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{F4013424-F3EE-34E0-80A9-1EAB8C7EBEAB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendors">
+      <UniqueIdentifier>{2068F8BE-88E7-3A0C-B668-EF4301AEE5FA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

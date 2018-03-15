@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A0388B9D-372B-3CC1-8AF4-910A1686EA1D}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/bullet/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Karma/Documents/workspace/opengl-space/Glitter -BC:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build --check-stamp-file C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/Glitter/Vendor/bullet/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/bullet/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.10\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\BulletConfig.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\bullet\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/bullet/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Karma/Documents/workspace/opengl-space/Glitter -BC:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build --check-stamp-file C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/Glitter/Vendor/bullet/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/bullet/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.10\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\BulletConfig.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\bullet\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/bullet/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Karma/Documents/workspace/opengl-space/Glitter -BC:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build --check-stamp-file C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/Glitter/Vendor/bullet/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/bullet/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.10\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\BulletConfig.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\bullet\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/bullet/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Karma/Documents/workspace/opengl-space/Glitter -BC:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build --check-stamp-file C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/Glitter/Vendor/bullet/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/bullet/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.10\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\BulletConfig.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\bullet\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\ZERO_CHECK.vcxproj">
+      <Project>{EAE32383-B796-38AB-8802-697713EACDFB}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\bullet\src\Bullet3Serialize\Bullet2FileLoader\Bullet2FileLoader.vcxproj">
+      <Project>{4D3087A8-8060-320C-8ADB-F2A42FFD8962}</Project>
+      <Name>Bullet2FileLoader</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\bullet\src\Bullet3Collision\Bullet3Collision.vcxproj">
+      <Project>{B96197E5-1826-33F7-926D-71A1A19141C2}</Project>
+      <Name>Bullet3Collision</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\bullet\src\Bullet3Common\Bullet3Common.vcxproj">
+      <Project>{81A90136-A3FB-3210-94C1-C465CD88D72D}</Project>
+      <Name>Bullet3Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\bullet\src\Bullet3Dynamics\Bullet3Dynamics.vcxproj">
+      <Project>{F2FBD036-8BEF-3C16-B473-24398E108DA2}</Project>
+      <Name>Bullet3Dynamics</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\bullet\src\Bullet3Geometry\Bullet3Geometry.vcxproj">
+      <Project>{69C30559-B8FC-3623-8EB7-D84D298BA146}</Project>
+      <Name>Bullet3Geometry</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\bullet\src\Bullet3OpenCL\Bullet3OpenCL_clew.vcxproj">
+      <Project>{ABBAFEFE-AE1B-37F2-A1C2-F4C49D343A10}</Project>
+      <Name>Bullet3OpenCL_clew</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\bullet\src\BulletCollision\BulletCollision.vcxproj">
+      <Project>{8F32FF2B-1644-3BA8-8978-AEFC541A1C3C}</Project>
+      <Name>BulletCollision</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\bullet\src\BulletDynamics\BulletDynamics.vcxproj">
+      <Project>{6FBA3D80-BECC-3467-9C16-24D6B0E39532}</Project>
+      <Name>BulletDynamics</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\bullet\src\BulletInverseDynamics\BulletInverseDynamics.vcxproj">
+      <Project>{372139EE-DA38-3F69-A72B-B6171EB2234F}</Project>
+      <Name>BulletInverseDynamics</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\bullet\src\BulletSoftBody\BulletSoftBody.vcxproj">
+      <Project>{3FB43828-4DFC-36B4-A1C6-C24C979374AB}</Project>
+      <Name>BulletSoftBody</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\bullet\src\LinearMath\LinearMath.vcxproj">
+      <Project>{A74944CC-DFDB-3A31-A79E-A6999A772B0A}</Project>
+      <Name>LinearMath</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
