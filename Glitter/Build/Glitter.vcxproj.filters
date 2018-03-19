@@ -28,6 +28,9 @@
     <ClCompile Include="..\Glitter\Sources\lightpts.cpp">
       <Filter>Sources</Filter>
     </ClCompile>
+    <ClCompile Include="..\Glitter\Sources\lightltc.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\camera.hpp">
@@ -60,6 +63,12 @@
     <ClInclude Include="..\Glitter\Sources\lightpts.hpp">
       <Filter>Headers</Filter>
     </ClInclude>
+    <ClInclude Include="..\Glitter\Headers\ltc.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Glitter\Sources\lightltc.hpp">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\CMakeLists.txt" />
@@ -74,6 +83,10 @@
     <None Include="..\Glitter\Shaders\lighting.vert.glsl" />
     <None Include="..\Glitter\Shaders\lightpoly.frag.glsl" />
     <None Include="..\Glitter\Shaders\lightpoly.vert.glsl" />
+    <None Include="..\Glitter\Shaders\ltc.fs" />
+    <None Include="..\Glitter\Shaders\ltc.vs" />
+    <None Include="..\Glitter\Shaders\ltc_blit.fs" />
+    <None Include="..\Glitter\Shaders\ltc_blit.vs" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">

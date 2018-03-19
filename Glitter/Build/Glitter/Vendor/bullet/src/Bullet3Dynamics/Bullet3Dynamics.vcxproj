@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -126,7 +126,8 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NO_OPENGL3;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat></DebugInformationFormat>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NO_OPENGL3;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -161,7 +162,8 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NO_OPENGL3;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat></DebugInformationFormat>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NO_OPENGL3;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -271,12 +273,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\Bullet3Dynamics\b3CpuRigidBodyPipeline.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\Bullet3Dynamics\ConstraintSolver\b3FixedConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\Bullet3Dynamics\ConstraintSolver\b3Generic6DofConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\Bullet3Dynamics\ConstraintSolver\b3PgsJacobiSolver.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\Bullet3Dynamics\ConstraintSolver\b3Point2PointConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\Bullet3Dynamics\ConstraintSolver\b3TypedConstraint.cpp"  />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\Bullet3Dynamics\b3CpuRigidBodyPipeline.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\Bullet3Dynamics\ConstraintSolver\b3FixedConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\Bullet3Dynamics\ConstraintSolver\b3Generic6DofConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\Bullet3Dynamics\ConstraintSolver\b3PgsJacobiSolver.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\Bullet3Dynamics\ConstraintSolver\b3Point2PointConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\Bullet3Dynamics\ConstraintSolver\b3TypedConstraint.cpp" />
     <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\Bullet3Dynamics\b3CpuRigidBodyPipeline.h" />
     <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\Bullet3Dynamics\ConstraintSolver\b3ContactSolverInfo.h" />
     <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\Bullet3Dynamics\ConstraintSolver\b3FixedConstraint.h" />

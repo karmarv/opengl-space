@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -126,7 +126,8 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NO_OPENGL3;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat></DebugInformationFormat>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NO_OPENGL3;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -161,7 +162,8 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NO_OPENGL3;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat></DebugInformationFormat>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NO_OPENGL3;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -271,42 +273,42 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Character\btKinematicCharacterController.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btContactConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btFixedConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btGearConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btGeneric6DofConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btGeneric6DofSpringConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btGeneric6DofSpring2Constraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btHinge2Constraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btHingeConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btPoint2PointConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolver.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btNNCGConstraintSolver.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btSliderConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btSolve2LinearConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btTypedConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btUniversalConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Dynamics\btDiscreteDynamicsWorld.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Dynamics\btDiscreteDynamicsWorldMt.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Dynamics\btSimulationIslandManagerMt.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Dynamics\btRigidBody.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Dynamics\btSimpleDynamicsWorld.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Vehicle\btRaycastVehicle.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Vehicle\btWheelInfo.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Featherstone\btMultiBody.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Featherstone\btMultiBodyConstraintSolver.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Featherstone\btMultiBodyDynamicsWorld.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Featherstone\btMultiBodyJointLimitConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Featherstone\btMultiBodyConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Featherstone\btMultiBodyPoint2Point.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Featherstone\btMultiBodyFixedConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Featherstone\btMultiBodySliderConstraint.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Featherstone\btMultiBodyJointMotor.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\MLCPSolvers\btDantzigLCP.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\MLCPSolvers\btMLCPSolver.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\MLCPSolvers\btLemkeAlgorithm.cpp"  />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Character\btKinematicCharacterController.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btContactConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btFixedConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btGearConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btGeneric6DofConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btGeneric6DofSpringConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btGeneric6DofSpring2Constraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btHinge2Constraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btHingeConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btPoint2PointConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolver.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btNNCGConstraintSolver.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btSliderConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btSolve2LinearConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btTypedConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btUniversalConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Dynamics\btDiscreteDynamicsWorld.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Dynamics\btDiscreteDynamicsWorldMt.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Dynamics\btSimulationIslandManagerMt.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Dynamics\btRigidBody.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Dynamics\btSimpleDynamicsWorld.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Vehicle\btRaycastVehicle.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Vehicle\btWheelInfo.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Featherstone\btMultiBody.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Featherstone\btMultiBodyConstraintSolver.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Featherstone\btMultiBodyDynamicsWorld.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Featherstone\btMultiBodyJointLimitConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Featherstone\btMultiBodyConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Featherstone\btMultiBodyPoint2Point.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Featherstone\btMultiBodyFixedConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Featherstone\btMultiBodySliderConstraint.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\Featherstone\btMultiBodyJointMotor.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\MLCPSolvers\btDantzigLCP.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\MLCPSolvers\btMLCPSolver.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\MLCPSolvers\btLemkeAlgorithm.cpp" />
     <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\btBulletDynamicsCommon.h" />
     <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\btBulletCollisionCommon.h" />
     <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletDynamics\ConstraintSolver\btConeTwistConstraint.h" />

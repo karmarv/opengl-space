@@ -8,12 +8,12 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <GLFW/glfw3.h>
 #include <glm/gtc/matrix_transform.hpp>
+#include <SOIL\SOIL.h>
 
 // Standard Headers
 #include <cstdio>
 #include <cstdlib>
 #include <shader.hpp>
-#include <camera.hpp>
 #include <filesystem.hpp>
 
 //#define STB_IMAGE_IMPLEMENTATION

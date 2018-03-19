@@ -1,7 +1,7 @@
 // Local Headers
 #include "glitter.hpp"
 #include "lightpts.hpp"
-#include "lightpoly.hpp"
+#include "lightltc.hpp"
 
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
@@ -46,8 +46,7 @@ int main(int argc, char * argv[]) {
 	// Load a model from obj file
 	//Model sampleModel(FileSystem::getPath("Resources/crytek_sponza/sponza.obj").c_str());
 
-	//Load the Poly light
-	LightPoly polyLight;
+	LightLtc lightLtc;
 
     // Rendering Loop
     while (glfwWindowShouldClose(mWindow) == false) {
@@ -66,7 +65,8 @@ int main(int argc, char * argv[]) {
 		glUniformMatrix4fv(glGetUniformLocation(sampleShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
 		
 		RenderLightCube(projection, view, model, camera.Position, camera.Front);
-		polyLight.Render(projection, view, model, camera);
+		//polyLight.Render(projection, view, model);
+		lightLtc.Render(projection, view, model);
 
 		model = glm::mat4();
 		model = glm::scale(model, glm::vec3(0.05f));    // The sponza model is too big, scale it first

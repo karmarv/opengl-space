@@ -309,11 +309,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Glitter\Sources\lightltc.cpp" />
     <ClCompile Include="..\Glitter\Sources\lightpoly.cpp" />
     <ClCompile Include="..\Glitter\Sources\lutils.cpp" />
     <ClCompile Include="..\Glitter\Sources\lightpts.cpp" />
     <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Sources\main.cpp" />
+    <ClInclude Include="..\Glitter\Headers\ltc.h" />
     <ClInclude Include="..\Glitter\Headers\stb_image.h" />
+    <ClInclude Include="..\Glitter\Sources\lightltc.hpp" />
     <ClInclude Include="..\Glitter\Sources\lightpoly.hpp" />
     <ClInclude Include="..\Glitter\Sources\lutils.hpp" />
     <ClInclude Include="..\Glitter\Sources\lightpts.hpp" />
@@ -331,6 +334,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <None Include="..\Glitter\Shaders\lighting.vert.glsl" />
     <None Include="..\Glitter\Shaders\lightpoly.frag.glsl" />
     <None Include="..\Glitter\Shaders\lightpoly.vert.glsl" />
+    <None Include="..\Glitter\Shaders\ltc.fs" />
+    <None Include="..\Glitter\Shaders\ltc.vs" />
+    <None Include="..\Glitter\Shaders\ltc_blit.fs" />
+    <None Include="..\Glitter\Shaders\ltc_blit.vs" />
     <None Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Readme.md" />
     <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\src\glad.c">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\Bullet3Geometry\b3ConvexHullComputer.cpp">
@@ -26,11 +26,11 @@
     <CustomBuild Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\Bullet3Geometry\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{14CDD3B9-8DA4-3900-BAFE-A7C79C0CC823}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{5577623A-E976-3F49-94BE-5563E4BF09DF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{14CDD3B9-8DA4-3900-BAFE-A7C79C0CC823}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

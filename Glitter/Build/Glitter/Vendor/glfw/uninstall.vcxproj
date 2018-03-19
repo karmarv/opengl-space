@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -102,62 +102,6 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/glfw/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Karma/Documents/workspace/opengl-space/Glitter -BC:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build --check-stamp-file C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/Glitter/Vendor/glfw/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/glfw/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.10\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMake\modules\FindVulkan.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw3Config.cmake.in;C:\Program Files\CMake\share\cmake-3.10\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw_config.h.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw3.pc.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\cmake_uninstall.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\glfw\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/glfw/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Karma/Documents/workspace/opengl-space/Glitter -BC:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build --check-stamp-file C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/Glitter/Vendor/glfw/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/glfw/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.10\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMake\modules\FindVulkan.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw3Config.cmake.in;C:\Program Files\CMake\share\cmake-3.10\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw_config.h.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw3.pc.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\cmake_uninstall.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\glfw\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/glfw/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Karma/Documents/workspace/opengl-space/Glitter -BC:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build --check-stamp-file C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/Glitter/Vendor/glfw/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/glfw/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.10\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMake\modules\FindVulkan.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw3Config.cmake.in;C:\Program Files\CMake\share\cmake-3.10\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw_config.h.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw3.pc.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\cmake_uninstall.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\glfw\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/glfw/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Karma/Documents/workspace/opengl-space/Glitter -BC:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build --check-stamp-file C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/Glitter/Vendor/glfw/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/glfw/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.10\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMake\modules\FindVulkan.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw3Config.cmake.in;C:\Program Files\CMake\share\cmake-3.10\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw_config.h.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw3.pc.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\cmake_uninstall.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\glfw\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
     <CustomBuild Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\825ddc37a5ceb1aece6d00e6807bc73d\uninstall.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
@@ -210,6 +154,62 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/CMakeFiles/825ddc37a5ceb1aece6d00e6807bc73d/uninstall.rule;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\glfw\CMakeFiles\uninstall</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/glfw/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Karma/Documents/workspace/opengl-space/Glitter -BC:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build --check-stamp-file C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/Glitter/Vendor/glfw/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/glfw/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.11\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageMessage.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMake\modules\FindVulkan.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw3Config.cmake.in;C:\Program Files\CMake\share\cmake-3.11\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw_config.h.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw3.pc.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\cmake_uninstall.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\glfw\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/glfw/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Karma/Documents/workspace/opengl-space/Glitter -BC:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build --check-stamp-file C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/Glitter/Vendor/glfw/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/glfw/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.11\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageMessage.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMake\modules\FindVulkan.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw3Config.cmake.in;C:\Program Files\CMake\share\cmake-3.11\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw_config.h.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw3.pc.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\cmake_uninstall.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\glfw\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/glfw/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Karma/Documents/workspace/opengl-space/Glitter -BC:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build --check-stamp-file C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/Glitter/Vendor/glfw/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/glfw/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.11\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageMessage.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMake\modules\FindVulkan.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw3Config.cmake.in;C:\Program Files\CMake\share\cmake-3.11\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw_config.h.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw3.pc.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\cmake_uninstall.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\glfw\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/glfw/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Karma/Documents/workspace/opengl-space/Glitter -BC:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build --check-stamp-file C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Build/Glitter/Vendor/glfw/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/glfw/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.11\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageMessage.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMake\modules\FindVulkan.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw3Config.cmake.in;C:\Program Files\CMake\share\cmake-3.11\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw_config.h.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\src\glfw3.pc.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\cmake_uninstall.cmake.in;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\glfw\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -122,7 +122,8 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;OPENDDL_NO_USE_CPP11;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat></DebugInformationFormat>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;OPENDDL_NO_USE_CPP11;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -155,7 +156,8 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;OPENDDL_NO_USE_CPP11;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat></DebugInformationFormat>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;OPENDDL_NO_USE_CPP11;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -218,7 +220,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/contrib/zlib/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCSourceCompiles.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zlib.pc.cmakein;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zconf.h.cmakein;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/contrib/zlib/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceCompiles.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zlib.pc.cmakein;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zconf.h.cmakein;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\assimp\contrib\zlib\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/contrib/zlib/CMakeLists.txt</Message>
@@ -231,7 +233,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/contrib/zlib/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCSourceCompiles.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zlib.pc.cmakein;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zconf.h.cmakein;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/contrib/zlib/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceCompiles.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zlib.pc.cmakein;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zconf.h.cmakein;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\assimp\contrib\zlib\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/contrib/zlib/CMakeLists.txt</Message>
@@ -244,7 +246,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/contrib/zlib/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCSourceCompiles.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zlib.pc.cmakein;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zconf.h.cmakein;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/contrib/zlib/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceCompiles.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zlib.pc.cmakein;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zconf.h.cmakein;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\assimp\contrib\zlib\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/contrib/zlib/CMakeLists.txt</Message>
@@ -257,27 +259,27 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/contrib/zlib/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCSourceCompiles.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zlib.pc.cmakein;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zconf.h.cmakein;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/contrib/zlib/CMakeLists.txt;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.11\Modules\CheckCSourceCompiles.cmake;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zlib.pc.cmakein;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zconf.h.cmakein;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\assimp\contrib\zlib\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\adler32.c"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\compress.c"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\crc32.c"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\deflate.c"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\gzclose.c"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\gzlib.c"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\gzread.c"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\gzwrite.c"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\inflate.c"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\infback.c"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\inftrees.c"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\inffast.c"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\trees.c"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\uncompr.c"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zutil.c"  />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\adler32.c" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\compress.c" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\crc32.c" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\deflate.c" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\gzclose.c" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\gzlib.c" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\gzread.c" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\gzwrite.c" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\inflate.c" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\infback.c" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\inftrees.c" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\inffast.c" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\trees.c" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\uncompr.c" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zutil.c" />
     <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\assimp\contrib\zlib\zconf.h" />
     <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\zlib.h" />
     <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\contrib\zlib\crc32.h" />

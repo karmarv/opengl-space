@@ -76,6 +76,12 @@ void RenderBlock()
 	glBindVertexArray(0);
 }
 
+const char *get_filename_ext(const char *filename) {
+	const char *dot = strrchr(filename, '.');
+	if (!dot || dot == filename) return "";
+	return dot + 1;
+}
+
 // utility function for loading a 2D texture from file
 // ---------------------------------------------------
 unsigned int loadTexture(char const * path)
@@ -84,7 +90,22 @@ unsigned int loadTexture(char const * path)
 	glGenTextures(1, &textureID);
 
 	int width, height, nrComponents;
-	unsigned char *data = stbi_load(path, &width, &height, &nrComponents, 0);
+	unsigned char *data = NULL;
+	const char *ext = get_filename_ext(path);
+	if (std::strcmp(ext, "dds") == 0) {
+		std::cout << "Extension: " << ext << std::endl;
+
+		GLuint m_TEX = SOIL_load_OGL_texture(
+			path,
+			SOIL_LOAD_AUTO,
+			SOIL_CREATE_NEW_ID,
+			SOIL_FLAG_DDS_LOAD_DIRECT);
+		return m_TEX;
+	}
+	else {
+		data = stbi_load(path, &width, &height, &nrComponents, 0);
+	}
+
 	if (data)
 	{
 		GLenum format;
@@ -109,7 +130,8 @@ unsigned int loadTexture(char const * path)
 	else
 	{
 		std::cout << "Texture failed to load at path: " << path << std::endl;
-		stbi_image_free(data);
+		if(data != NULL)
+			stbi_image_free(data);
 	}
 
 	return textureID;

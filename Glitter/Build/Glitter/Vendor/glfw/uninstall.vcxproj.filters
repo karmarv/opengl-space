@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt" />
     <CustomBuild Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\825ddc37a5ceb1aece6d00e6807bc73d\uninstall.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
+    <CustomBuild Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\Glitter\Vendor\glfw\CMakeFiles\uninstall" />

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\code\Assimp.cpp">
@@ -1442,29 +1442,20 @@
     <CustomBuild Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\code\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{14CDD3B9-8DA4-3900-BAFE-A7C79C0CC823}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{5577623A-E976-3F49-94BE-5563E4BF09DF}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Compiler">
-      <UniqueIdentifier>{69A751CA-C51A-3DC1-B958-AFD784883E58}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Logging">
-      <UniqueIdentifier>{B00536E2-D0AD-3779-8B1D-F36ADFCC57A5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common">
-      <UniqueIdentifier>{F7F7A597-EBDC-398A-B3C5-D3F2FD88DD04}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AMF">
-      <UniqueIdentifier>{5C7C9C18-C858-3A3E-89CC-792C73769C75}</UniqueIdentifier>
+    <Filter Include="3D">
+      <UniqueIdentifier>{B986B0F6-820C-332E-B7A5-0C63C1F80F30}</UniqueIdentifier>
     </Filter>
     <Filter Include="3DS">
       <UniqueIdentifier>{12DE3C85-C11F-39CE-9BFF-34698B2C01A9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="3MF">
+      <UniqueIdentifier>{10E07536-E12E-3E09-8B82-A88453FF7418}</UniqueIdentifier>
+    </Filter>
     <Filter Include="AC">
       <UniqueIdentifier>{8F2A8BB6-5596-32D2-AE93-095DF18A5019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AMF">
+      <UniqueIdentifier>{5C7C9C18-C858-3A3E-89CC-792C73769C75}</UniqueIdentifier>
     </Filter>
     <Filter Include="ASE">
       <UniqueIdentifier>{BDAF15B3-1044-3D38-B651-3BF235F45E32}</UniqueIdentifier>
@@ -1478,32 +1469,71 @@
     <Filter Include="B3D">
       <UniqueIdentifier>{6FF4F0B7-7B37-390D-AAF9-1ADB1FBDEF23}</UniqueIdentifier>
     </Filter>
+    <Filter Include="BLEND">
+      <UniqueIdentifier>{9AA2F215-B2AE-3902-B23D-10F305AC9A21}</UniqueIdentifier>
+    </Filter>
     <Filter Include="BVH">
       <UniqueIdentifier>{8742F457-28A8-3CA2-A263-504FF0A248A3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="COB">
+      <UniqueIdentifier>{49938C8A-DA21-307A-93BA-B9267F42C3AF}</UniqueIdentifier>
     </Filter>
     <Filter Include="COLLADA">
       <UniqueIdentifier>{74F0137C-8A30-319E-BBB5-17B004A766ED}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CSM">
+      <UniqueIdentifier>{395D528F-9966-314B-BD90-17C43777E362}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clipper">
+      <UniqueIdentifier>{4838FD39-7669-3A2C-B28A-F72789ABB91E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{F7F7A597-EBDC-398A-B3C5-D3F2FD88DD04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compiler">
+      <UniqueIdentifier>{69A751CA-C51A-3DC1-B958-AFD784883E58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ConvertUTF">
+      <UniqueIdentifier>{579F4CE7-4C91-3F6D-9B21-F4365D2E9C31}</UniqueIdentifier>
+    </Filter>
     <Filter Include="DXF">
       <UniqueIdentifier>{0A74D662-9934-3132-857C-E3771F72BA11}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CSM">
-      <UniqueIdentifier>{395D528F-9966-314B-BD90-17C43777E362}</UniqueIdentifier>
+    <Filter Include="Exporter">
+      <UniqueIdentifier>{2B74EA69-366F-30A4-980C-9F597B773657}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FBX">
+      <UniqueIdentifier>{A432A9DE-9719-3B7E-AB1A-D083665E021B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GLTF">
+      <UniqueIdentifier>{0872364F-D397-3C58-9941-4933DDB417DE}</UniqueIdentifier>
     </Filter>
     <Filter Include="HMP">
       <UniqueIdentifier>{63D3D042-1B66-3FD3-9F86-FA32A516349D}</UniqueIdentifier>
     </Filter>
-    <Filter Include="IRRMESH">
-      <UniqueIdentifier>{DE2B53DE-9385-3D2F-8E8B-A3118DED2E3A}</UniqueIdentifier>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5577623A-E976-3F49-94BE-5563E4BF09DF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IFC">
+      <UniqueIdentifier>{33637045-F6BF-39DD-A577-E3D26C50D176}</UniqueIdentifier>
     </Filter>
     <Filter Include="IRR">
       <UniqueIdentifier>{007C8D3B-2842-35A4-A64B-548A45C9839C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IRRMESH">
+      <UniqueIdentifier>{DE2B53DE-9385-3D2F-8E8B-A3118DED2E3A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IrrXML">
+      <UniqueIdentifier>{DB0BA8B8-C699-37B1-B9F5-167BB7D28B4D}</UniqueIdentifier>
     </Filter>
     <Filter Include="LWO">
       <UniqueIdentifier>{169693EC-EAD2-3B5C-B5D6-7FCA76D19601}</UniqueIdentifier>
     </Filter>
     <Filter Include="LWS">
       <UniqueIdentifier>{9CA532C8-D1DB-345B-8367-64187F675CA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logging">
+      <UniqueIdentifier>{B00536E2-D0AD-3779-8B1D-F36ADFCC57A5}</UniqueIdentifier>
     </Filter>
     <Filter Include="MD2">
       <UniqueIdentifier>{BFDC1463-B1DE-39C1-BBE7-BBC2B1FD6D4B}</UniqueIdentifier>
@@ -1520,20 +1550,23 @@
     <Filter Include="MDL">
       <UniqueIdentifier>{02D4A563-E63C-37E3-B635-8BC53A828890}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MS3D">
+      <UniqueIdentifier>{5A7679F1-5FDC-3047-89BB-F62D818F3266}</UniqueIdentifier>
+    </Filter>
     <Filter Include="MaterialSystem">
       <UniqueIdentifier>{D93656A3-53E9-3C5A-BE8B-D244CABB1104}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="NFF">
-      <UniqueIdentifier>{991E4BA4-6F3E-3A2D-AFDF-07C2DCA07A8B}</UniqueIdentifier>
     </Filter>
     <Filter Include="NDO">
       <UniqueIdentifier>{FE225694-256C-357C-B54C-72EB2B8FF5C7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="OFF">
-      <UniqueIdentifier>{E0E13F61-A39A-3F82-8255-BCB3C3854BE2}</UniqueIdentifier>
+    <Filter Include="NFF">
+      <UniqueIdentifier>{991E4BA4-6F3E-3A2D-AFDF-07C2DCA07A8B}</UniqueIdentifier>
     </Filter>
     <Filter Include="OBJ">
       <UniqueIdentifier>{1BF65429-9461-3481-B76D-FCBAE2E1738B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OFF">
+      <UniqueIdentifier>{E0E13F61-A39A-3F82-8255-BCB3C3854BE2}</UniqueIdentifier>
     </Filter>
     <Filter Include="OGRE">
       <UniqueIdentifier>{72B66841-AE1E-38CC-BFAF-B481659B5F4B}</UniqueIdentifier>
@@ -1544,32 +1577,17 @@
     <Filter Include="PLY">
       <UniqueIdentifier>{9CB1C799-307E-32B7-A123-4D3061D7B06B}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MS3D">
-      <UniqueIdentifier>{5A7679F1-5FDC-3047-89BB-F62D818F3266}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="COB">
-      <UniqueIdentifier>{49938C8A-DA21-307A-93BA-B9267F42C3AF}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="BLEND">
-      <UniqueIdentifier>{9AA2F215-B2AE-3902-B23D-10F305AC9A21}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="IFC">
-      <UniqueIdentifier>{33637045-F6BF-39DD-A577-E3D26C50D176}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="XGL">
-      <UniqueIdentifier>{869214E9-7EBA-313E-9548-7C71609DEEDD}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="FBX">
-      <UniqueIdentifier>{A432A9DE-9719-3B7E-AB1A-D083665E021B}</UniqueIdentifier>
+    <Filter Include="Poly2Tri">
+      <UniqueIdentifier>{DF15A473-C208-3E6A-9356-77AD9108CEC9}</UniqueIdentifier>
     </Filter>
     <Filter Include="PostProcessing">
       <UniqueIdentifier>{722769BD-39B3-332A-949C-7FB8926BCECE}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Q3D">
-      <UniqueIdentifier>{6D791AF4-5484-31D0-B90E-E0706C61FFB5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Q3BSP">
       <UniqueIdentifier>{BAF7FC99-4F49-34AA-A5CA-6C9C5EACF5AA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Q3D">
+      <UniqueIdentifier>{6D791AF4-5484-31D0-B90E-E0706C61FFB5}</UniqueIdentifier>
     </Filter>
     <Filter Include="RAW">
       <UniqueIdentifier>{7733F65B-428D-3B9B-A143-E538AE76FDD2}</UniqueIdentifier>
@@ -1583,11 +1601,14 @@
     <Filter Include="STL">
       <UniqueIdentifier>{7A2B6C2A-AF3B-3EC6-B1A0-352A4D820B54}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{14CDD3B9-8DA4-3900-BAFE-A7C79C0CC823}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Step">
+      <UniqueIdentifier>{6B3EC9F8-1741-38F3-9390-49EB6BFC643F}</UniqueIdentifier>
+    </Filter>
     <Filter Include="TERRAGEN">
       <UniqueIdentifier>{EA65B705-D4F4-318F-8B6C-165CEBBF2EB3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="3D">
-      <UniqueIdentifier>{B986B0F6-820C-332E-B7A5-0C63C1F80F30}</UniqueIdentifier>
     </Filter>
     <Filter Include="X">
       <UniqueIdentifier>{B845BB1F-1A63-31A1-A7AB-B7AC8BAB62F0}</UniqueIdentifier>
@@ -1595,38 +1616,17 @@
     <Filter Include="X3D">
       <UniqueIdentifier>{940146A1-3198-30C6-9D73-99208F669892}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GLTF">
-      <UniqueIdentifier>{0872364F-D397-3C58-9941-4933DDB417DE}</UniqueIdentifier>
+    <Filter Include="XGL">
+      <UniqueIdentifier>{869214E9-7EBA-313E-9548-7C71609DEEDD}</UniqueIdentifier>
     </Filter>
-    <Filter Include="3MF">
-      <UniqueIdentifier>{10E07536-E12E-3E09-8B82-A88453FF7418}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Step">
-      <UniqueIdentifier>{6B3EC9F8-1741-38F3-9390-49EB6BFC643F}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Exporter">
-      <UniqueIdentifier>{2B74EA69-366F-30A4-980C-9F597B773657}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="IrrXML">
-      <UniqueIdentifier>{DB0BA8B8-C699-37B1-B9F5-167BB7D28B4D}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ConvertUTF">
-      <UniqueIdentifier>{579F4CE7-4C91-3F6D-9B21-F4365D2E9C31}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Clipper">
-      <UniqueIdentifier>{4838FD39-7669-3A2C-B28A-F72789ABB91E}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Poly2Tri">
-      <UniqueIdentifier>{DF15A473-C208-3E6A-9356-77AD9108CEC9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="unzip">
-      <UniqueIdentifier>{74479331-8D07-39B5-895C-D3877C179F6B}</UniqueIdentifier>
+    <Filter Include="open3dgc">
+      <UniqueIdentifier>{C7672E31-47BD-3815-8E78-22C7601D0F62}</UniqueIdentifier>
     </Filter>
     <Filter Include="openddl_parser">
       <UniqueIdentifier>{A75A2927-3C2C-3492-8338-CA9B1B201EF2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="open3dgc">
-      <UniqueIdentifier>{C7672E31-47BD-3815-8E78-22C7601D0F62}</UniqueIdentifier>
+    <Filter Include="unzip">
+      <UniqueIdentifier>{74479331-8D07-39B5-895C-D3877C179F6B}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

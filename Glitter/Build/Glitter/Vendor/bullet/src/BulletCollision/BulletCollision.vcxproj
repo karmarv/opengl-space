@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -126,7 +126,8 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NO_OPENGL3;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat></DebugInformationFormat>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NO_OPENGL3;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -161,7 +162,8 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NO_OPENGL3;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat></DebugInformationFormat>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NO_OPENGL3;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -271,101 +273,101 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btBroadphaseProxy.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btCollisionAlgorithm.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btDbvt.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btDbvtBroadphase.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btDispatcher.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btOverlappingPairCache.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btQuantizedBvh.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btSimpleBroadphase.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btActivatingCollisionAlgorithm.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btBoxBoxCollisionAlgorithm.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btBox2dBox2dCollisionAlgorithm.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btBoxBoxDetector.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btCollisionDispatcher.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btCollisionObject.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btCollisionWorld.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btCollisionWorldImporter.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btCompoundCollisionAlgorithm.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btCompoundCompoundCollisionAlgorithm.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btConvexConcaveCollisionAlgorithm.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btConvexConvexAlgorithm.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btConvexPlaneCollisionAlgorithm.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btConvex2dConvex2dAlgorithm.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btDefaultCollisionConfiguration.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btEmptyCollisionAlgorithm.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btGhostObject.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btHashedSimplePairCache.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btInternalEdgeUtility.cpp"  />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btBroadphaseProxy.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btCollisionAlgorithm.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btDbvt.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btDbvtBroadphase.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btDispatcher.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btOverlappingPairCache.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btQuantizedBvh.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btSimpleBroadphase.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btActivatingCollisionAlgorithm.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btBoxBoxCollisionAlgorithm.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btBox2dBox2dCollisionAlgorithm.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btBoxBoxDetector.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btCollisionDispatcher.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btCollisionObject.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btCollisionWorld.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btCollisionWorldImporter.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btCompoundCollisionAlgorithm.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btCompoundCompoundCollisionAlgorithm.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btConvexConcaveCollisionAlgorithm.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btConvexConvexAlgorithm.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btConvexPlaneCollisionAlgorithm.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btConvex2dConvex2dAlgorithm.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btDefaultCollisionConfiguration.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btEmptyCollisionAlgorithm.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btGhostObject.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btHashedSimplePairCache.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btInternalEdgeUtility.cpp" />
     <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btInternalEdgeUtility.h" />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btManifoldResult.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btSimulationIslandManager.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btSphereBoxCollisionAlgorithm.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btSphereSphereCollisionAlgorithm.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btSphereTriangleCollisionAlgorithm.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btUnionFind.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\SphereTriangleDetector.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btBoxShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btBox2dShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btBvhTriangleMeshShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btCapsuleShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btCollisionShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btCompoundShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btConcaveShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btConeShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btConvexHullShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btConvexInternalShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btConvexPointCloudShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btConvexPolyhedron.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btConvexShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btConvex2dShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btConvexTriangleMeshShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btCylinderShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btEmptyShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btHeightfieldTerrainShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btMinkowskiSumShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btMultimaterialTriangleMeshShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btMultiSphereShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btOptimizedBvh.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btPolyhedralConvexShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btScaledBvhTriangleMeshShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btShapeHull.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btSphereShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btStaticPlaneShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btStridingMeshInterface.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btTetrahedronShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btTriangleBuffer.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btTriangleCallback.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btTriangleIndexVertexArray.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btTriangleIndexVertexMaterialArray.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btTriangleMesh.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btTriangleMeshShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btUniformScalingShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\btContactProcessing.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\btGenericPoolAllocator.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\btGImpactBvh.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\btGImpactCollisionAlgorithm.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\btGImpactQuantizedBvh.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\btGImpactShape.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\btTriangleShapeEx.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\gim_box_set.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\gim_contact.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\gim_memory.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\gim_tri_collision.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btContinuousConvexCollision.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btConvexCast.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btGjkConvexCast.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btGjkEpa2.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btGjkEpaPenetrationDepthSolver.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btGjkPairDetector.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btMinkowskiPenetrationDepthSolver.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btPersistentManifold.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btRaycastCallback.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btSubSimplexConvexCast.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btVoronoiSimplexSolver.cpp"  />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btPolyhedralContactClipping.cpp"  />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btManifoldResult.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btSimulationIslandManager.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btSphereBoxCollisionAlgorithm.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btSphereSphereCollisionAlgorithm.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btSphereTriangleCollisionAlgorithm.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\btUnionFind.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionDispatch\SphereTriangleDetector.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btBoxShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btBox2dShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btBvhTriangleMeshShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btCapsuleShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btCollisionShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btCompoundShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btConcaveShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btConeShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btConvexHullShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btConvexInternalShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btConvexPointCloudShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btConvexPolyhedron.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btConvexShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btConvex2dShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btConvexTriangleMeshShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btCylinderShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btEmptyShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btHeightfieldTerrainShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btMinkowskiSumShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btMultimaterialTriangleMeshShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btMultiSphereShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btOptimizedBvh.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btPolyhedralConvexShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btScaledBvhTriangleMeshShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btShapeHull.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btSphereShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btStaticPlaneShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btStridingMeshInterface.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btTetrahedronShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btTriangleBuffer.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btTriangleCallback.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btTriangleIndexVertexArray.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btTriangleIndexVertexMaterialArray.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btTriangleMesh.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btTriangleMeshShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\CollisionShapes\btUniformScalingShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\btContactProcessing.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\btGenericPoolAllocator.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\btGImpactBvh.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\btGImpactCollisionAlgorithm.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\btGImpactQuantizedBvh.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\btGImpactShape.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\btTriangleShapeEx.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\gim_box_set.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\gim_contact.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\gim_memory.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\Gimpact\gim_tri_collision.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btContinuousConvexCollision.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btConvexCast.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btGjkConvexCast.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btGjkEpa2.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btGjkEpaPenetrationDepthSolver.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btGjkPairDetector.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btMinkowskiPenetrationDepthSolver.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btPersistentManifold.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btRaycastCallback.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btSubSimplexConvexCast.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btVoronoiSimplexSolver.cpp" />
+    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\NarrowPhaseCollision\btPolyhedralContactClipping.cpp" />
     <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\btBulletCollisionCommon.h" />
     <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btAxisSweep3.h" />
     <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src\BulletCollision\BroadphaseCollision\btBroadphaseInterface.h" />

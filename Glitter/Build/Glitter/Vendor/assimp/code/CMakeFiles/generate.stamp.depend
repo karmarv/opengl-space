@@ -1,5 +1,5 @@
 # CMake generation dependency list for this directory.
 C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/code/CMakeLists.txt
 C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/cmake-modules/FindRT.cmake
-C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake
-C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/FindPackageMessage.cmake

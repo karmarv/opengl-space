@@ -1,10 +1,10 @@
 # CMake generation dependency list for this directory.
 C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/contrib/zlib/CMakeLists.txt
-C:/Program Files/CMake/share/cmake-3.10/Modules/CheckTypeSize.cmake
-C:/Program Files/CMake/share/cmake-3.10/Modules/CheckIncludeFile.cmake
-C:/Program Files/CMake/share/cmake-3.10/Modules/CheckIncludeFileCXX.cmake
-C:/Program Files/CMake/share/cmake-3.10/Modules/CheckFunctionExists.cmake
-C:/Program Files/CMake/share/cmake-3.10/Modules/CheckIncludeFile.cmake
-C:/Program Files/CMake/share/cmake-3.10/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckTypeSize.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckIncludeFileCXX.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckFunctionExists.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.11/Modules/CheckCSourceCompiles.cmake
 C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/contrib/zlib/zlib.pc.cmakein
 C:/Users/Karma/Documents/workspace/opengl-space/Glitter/Glitter/Vendor/assimp/contrib/zlib/zconf.h.cmakein

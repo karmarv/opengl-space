@@ -1,7 +1,6 @@
 #include "lightpoly.hpp"
 
 
-
 LightPoly::LightPoly()
 {
 }
@@ -28,7 +27,7 @@ GLfloat lightVertices[] = {
 	-1.0f,  1.0f, 0.0f, 0.0f, 0.0f, 1.0f
 };
 
-void LightPoly::Render(glm::mat4 projection, glm::mat4 view, glm::mat4 model, Camera camera)
+void LightPoly::Render(glm::mat4 projection, glm::mat4 view, glm::mat4 model)
 {
 	// Initialize (if necessary)
 	if (lightVAO == 0)
@@ -153,7 +152,7 @@ void LightPoly::Setup()
 	lightingShader = new Shader(FileSystem::getPath("Shaders/lightpoly.vert.glsl").c_str(), FileSystem::getPath("Shaders/lightpoly.frag.glsl").c_str());
 
 	// Load textures 
-	_ltcAmp = loadTexture(FileSystem::getPath("Resources/textures/container2.png").c_str()); //ltc_amp.dds
-	_ltcMat = loadTexture(FileSystem::getPath("Resources/textures/container2_specular.png").c_str()); //ltc_mat.dds
+	_ltcAmp = loadTexture(FileSystem::getPath("Resources/textures/ltc_amp.dds").c_str()); //ltc_amp.dds  container2.png
+	_ltcMat = loadTexture(FileSystem::getPath("Resources/textures/ltc_mat.dds").c_str()); //ltc_mat.dds    container2_specular.png
 
 }

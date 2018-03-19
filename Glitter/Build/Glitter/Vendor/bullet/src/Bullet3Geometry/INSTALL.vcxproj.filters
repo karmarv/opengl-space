@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <CustomBuild Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\CMakeFiles\3cf43691c9056f9835342bcd008b1162\INSTALL_force.rule">

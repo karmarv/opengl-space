@@ -24,7 +24,7 @@ public:
 	unsigned int _ltcMat = 0;
 
 	/* Functions */
-	void Render(glm::mat4 projection, glm::mat4 view, glm::mat4 model, Camera camera);
+	void Render(glm::mat4 projection, glm::mat4 view, glm::mat4 model);
 	void Setup();
 };
 
