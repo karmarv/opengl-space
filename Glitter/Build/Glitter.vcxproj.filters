@@ -87,6 +87,10 @@
     <None Include="..\Glitter\Shaders\ltc.vs" />
     <None Include="..\Glitter\Shaders\ltc_blit.fs" />
     <None Include="..\Glitter\Shaders\ltc_blit.vs" />
+    <None Include="..\Glitter\Shaders\ltc_blit-copy.fs" />
+    <None Include="..\Glitter\Shaders\ltc_blit-copy.vs" />
+    <None Include="..\Glitter\Shaders\ltc-copy.fs" />
+    <None Include="..\Glitter\Shaders\ltc-copy.vs" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">

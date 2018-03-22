@@ -16,6 +16,16 @@ public:
 	Shader *blitShader;
 
 	/* Variables */
+	// Set values to program variables
+	const int width = 8;
+	const int height = 8;
+	float roughness = 0.25f;
+	glm::vec3 dcolor{ 1.0f, 0.0f, 0.0f };
+	glm::vec3 scolor{ 0.0f, 1.0f, 0.0f };
+	float intensity = 4.0f;
+	float roty = 0.0f;
+	float rotz = 0.0f;
+	bool twoSided = false;
 
 	GLuint cubeVAO = 0;
 	GLuint lightVAO = 0;

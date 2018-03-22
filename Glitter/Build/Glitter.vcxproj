@@ -334,8 +334,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <None Include="..\Glitter\Shaders\lighting.vert.glsl" />
     <None Include="..\Glitter\Shaders\lightpoly.frag.glsl" />
     <None Include="..\Glitter\Shaders\lightpoly.vert.glsl" />
+    <None Include="..\Glitter\Shaders\ltc-copy.fs" />
+    <None Include="..\Glitter\Shaders\ltc-copy.vs" />
     <None Include="..\Glitter\Shaders\ltc.fs" />
     <None Include="..\Glitter\Shaders\ltc.vs" />
+    <None Include="..\Glitter\Shaders\ltc_blit-copy.fs" />
+    <None Include="..\Glitter\Shaders\ltc_blit-copy.vs" />
     <None Include="..\Glitter\Shaders\ltc_blit.fs" />
     <None Include="..\Glitter\Shaders\ltc_blit.vs" />
     <None Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Readme.md" />
