@@ -83,7 +83,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glm;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\assimp\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\bullet\src;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glm;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\inc;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glfw\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\include;C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -112,7 +112,7 @@
     </Midl>
     <Link>
       <AdditionalDependencies>lib\Debug\assimp-vc140-mt.lib;lib\Debug\glfw3.lib;opengl32.lib;glu32.lib;lib\Debug\BulletDynamics.lib;lib\Debug\BulletCollision.lib;lib\Debug\LinearMath.lib;lib\Debug\zlibstaticd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
@@ -309,70 +309,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Glitter\Sources\lightltc.cpp" />
-    <ClCompile Include="..\Glitter\Sources\lightpoly.cpp" />
-    <ClCompile Include="..\Glitter\Sources\lutils.cpp" />
-    <ClCompile Include="..\Glitter\Sources\lightpts.cpp" />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Sources\main.cpp" />
-    <ClInclude Include="..\Glitter\Headers\ltc.h" />
-    <ClInclude Include="..\Glitter\Headers\stb_image.h" />
-    <ClInclude Include="..\Glitter\Sources\lightltc.hpp" />
-    <ClInclude Include="..\Glitter\Sources\lightpoly.hpp" />
-    <ClInclude Include="..\Glitter\Sources\lutils.hpp" />
-    <ClInclude Include="..\Glitter\Sources\lightpts.hpp" />
-    <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\camera.hpp" />
-    <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\filesystem.hpp" />
-    <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\glitter.hpp" />
-    <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\mesh.hpp" />
-    <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\model.hpp" />
-    <ClInclude Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Headers\shader.hpp" />
-    <None Include="..\Glitter\Shaders\geometry.frag.glsl" />
-    <None Include="..\Glitter\Shaders\geometry.vert.glsl" />
-    <None Include="..\Glitter\Shaders\lamp.frag.glsl" />
-    <None Include="..\Glitter\Shaders\lamp.vert.glsl" />
-    <None Include="..\Glitter\Shaders\lighting.frag.glsl" />
-    <None Include="..\Glitter\Shaders\lighting.vert.glsl" />
-    <None Include="..\Glitter\Shaders\lightpoly.frag.glsl" />
-    <None Include="..\Glitter\Shaders\lightpoly.vert.glsl" />
-    <None Include="..\Glitter\Shaders\ltc-copy.fs" />
-    <None Include="..\Glitter\Shaders\ltc-copy.vs" />
-    <None Include="..\Glitter\Shaders\ltc.fs" />
-    <None Include="..\Glitter\Shaders\ltc.vs" />
-    <None Include="..\Glitter\Shaders\ltc_blit-copy.fs" />
-    <None Include="..\Glitter\Shaders\ltc_blit-copy.vs" />
-    <None Include="..\Glitter\Shaders\ltc_blit.fs" />
-    <None Include="..\Glitter\Shaders\ltc_blit.vs" />
+    <ClCompile Include="..\Glitter\Vendor\glad\src\glad.c" />
     <None Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Readme.md" />
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\glad\src\glad.c">
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\SOIL.c">
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\image_DXT.c">
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\image_helper.c">
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Glitter\Vendor\soil\stb_image_aug.c">
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
-    </ClCompile>
+    <ClCompile Include="..\Glitter\Sources\arealight.cpp" />
+    <ClCompile Include="..\Glitter\Sources\Camera.cpp" />
+    <ClCompile Include="..\Glitter\Sources\main.cpp" />
+    <ClCompile Include="..\Glitter\Sources\mesh.cpp" />
+    <ClCompile Include="..\Glitter\Sources\shader.cpp" />
+    <ClCompile Include="..\Glitter\Sources\util.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\Karma\Documents\workspace\opengl-space\Glitter\Build\ZERO_CHECK.vcxproj">
@@ -403,6 +347,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{65F371BB-D3BC-364B-A778-CE844D6BFABD}</Project>
       <Name>zlibstatic</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Glitter\Headers\arealight.h" />
+    <ClInclude Include="..\Glitter\Headers\Camera.h" />
+    <ClInclude Include="..\Glitter\Headers\filesystem.hpp" />
+    <ClInclude Include="..\Glitter\Headers\ltc.h" />
+    <ClInclude Include="..\Glitter\Headers\ltcMaps.h" />
+    <ClInclude Include="..\Glitter\Headers\mesh.h" />
+    <ClInclude Include="..\Glitter\Headers\shader.h" />
+    <ClInclude Include="..\Glitter\Headers\stb_image.h" />
+    <ClInclude Include="..\Glitter\Headers\util.h" />
+    <ClInclude Include="..\Glitter\Vendor\glad\include\glad\glad.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

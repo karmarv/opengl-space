@@ -1,129 +1,363 @@
-// Local Headers
-#include "glitter.hpp"
-#include "lightpts.hpp"
-#include "lightltc.hpp"
+//External libraries
+#ifdef _WIN32
+    #define APIENTRY __stdcall
+#endif
+
+// GLAD
+#include <glad/glad.h>
+
+// confirm that GLAD didn't include windows.h
+#ifdef _WINDOWS_
+    #error windows.h was included!
+#endif
+
+#define GLM_ENABLE_EXPERIMENTAL
+
+#include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/matrix_inverse.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <assimp/Importer.hpp>      // C++ importer interface
+#include <assimp/scene.h>           // Output data structure
+
+//stl
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <sstream>
+#include <iomanip>
+
+//local
+#include "shader.h"
+#include "mesh.h"
+#include "util.h"
+#include "ltcMaps.h"
+#include "Camera.h"
+#include "arealight.h"
+
+#include <glm/gtx/rotate_vector.hpp>
+
+#define VSYNC true
+
+Camera *camera;
+
+double oldX;
+double oldY;
+
+Util::FBOstruct* fb1;
+Util::FBOstruct* fb2;
+Util::FBOstruct* fb3;
+
+void mouseMove(float xdelta, float ydelta) {
+	float rotatespeed = 0.005f;
+	camera->mFacing = glm::rotateY(camera->mFacing, -xdelta*rotatespeed);
+	camera->mFacing.y -= rotatespeed*ydelta;
+	glm::normalize(camera->mFacing);
+
+}
+void windowResizedCallback(GLFWwindow* window, int width, int height) {
+	float aspect = (float)width/height;
+	camera->setProjectionMatrix(glm::perspective((float)M_PI/3.0f, aspect, 0.001f, 1000.0f));
+	delete fb1;
+	delete fb2;
+	delete fb3;
+	fb1 = Util::initFBO(width, height, 0);
+	fb2 = Util::initFBO(width, height, 0);
+	fb3 = Util::initFBO(width, height, 0);
+}
+
+/* Inits a GLFW Window with OpenGL 3.3. Make sure glfwInit has been called */
+GLFWwindow* createWindow() {
+	GLFWmonitor* monitor = glfwGetPrimaryMonitor();
+	const GLFWvidmode* vidmode = glfwGetVideoMode(monitor);
+
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+	glfwSetErrorCallback([](int code, const char* msg) {std::cout << "code: " << code << " msg: " << msg;});
+
+	GLFWwindow* window = glfwCreateWindow(vidmode->width/2, vidmode->height/2, "Area Lighting", NULL, NULL);
+
+	if (!window) {
+		std::cout << "error creating window";
+		glfwTerminate();
+		return nullptr;
+	}
+
+	glfwMakeContextCurrent(window);
+	//glfwSwapInterval(VSYNC);
+
+	glfwSetWindowSizeCallback(window, windowResizedCallback);
+	return window;
+}
 
 
-void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
-void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
-void mouse_callback(GLFWwindow* window, double xpos, double ypos);
+int main(int argc, char *argv[]) {
+	if(!glfwInit())
+		return -1;
 
-Camera camera(glm::vec3(0.f, 0.f, 2.f));
+	GLFWwindow* mWindow = createWindow();
+	if (mWindow == nullptr)
+		return -1;
+	glfwMakeContextCurrent(mWindow);
 
-int main(int argc, char * argv[]) {
+	if (mWindow == NULL)
+	{
+		std::cout << "Failed to create GLFW window" << std::endl;
+		glfwTerminate();
+		return -1;
+	}
 
-    // Load GLFW and Create a Window
-    glfwInit();
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-    glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
-    auto mWindow = glfwCreateWindow(mWidth, mHeight, "OpenGL", nullptr, nullptr);
 
-    // Check for Valid Context
-    if (mWindow == nullptr) {
-        fprintf(stderr, "Failed to Create OpenGL Context");
-        return EXIT_FAILURE;
-    }
+	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)){
+		std::cout << "Failed to initialize GLAD OpenGL context" << std::endl;
+		return -1;
+	}
 
-    // Create Context and Load OpenGL Functions
-    glfwMakeContextCurrent(mWindow);
-    gladLoadGL();
-    fprintf(stderr, "OpenGL %s\n", glGetString(GL_VERSION));
 
-	// Set callback functions
-	glfwSetKeyCallback(mWindow, key_callback);
-	glfwSetCursorPosCallback(mWindow, mouse_callback);
-	glfwSetScrollCallback(mWindow, scroll_callback);
+	printf("GL Vendor:			%s\n", glGetString(GL_VENDOR));
+	printf("GL Render:			%s\n", glGetString(GL_RENDERER));
+	printf("GL Version:			%s\n", glGetString(GL_VERSION));
+
+	int width, height;
+	glfwGetWindowSize(mWindow, &width, &height);
+	camera = new Camera(width, height);
+	camera->update();
+
+	glfwGetCursorPos(mWindow,&oldX,&oldY);
+
+	//fps counter bookkeeping
+	float time_since_update = 0.0f, time = 0.0f, lastFrame = glfwGetTime();
+	int frames = 0;
+
+
+	Shader shader(FileSystem::getPath("Shaders/simple.vert").c_str(), FileSystem::getPath("Shaders/simple.frag").c_str());
+	Shader trunk(FileSystem::getPath("Shaders/quad.vert").c_str(), FileSystem::getPath("Shaders/trunk.frag").c_str());
+	Shader lpt(FileSystem::getPath("Shaders/quad.vert").c_str(), FileSystem::getPath("Shaders/lpt.frag").c_str());
+	Shader plain(FileSystem::getPath("Shaders/quad.vert").c_str(), FileSystem::getPath("Shaders/plain.frag").c_str());
+
+	GLuint normal = Util::createTexture(FileSystem::getPath("Resources/tile_normalmap.png").c_str());
+	GLuint rough = Util::createTexture(FileSystem::getPath("Resources/tileroughness.png").c_str());
+	GLuint diffuse = Util::createTexture(FileSystem::getPath("Resources/tilealbedo.png").c_str());
+
+	float roughness = 0.5f;
+
+	Mesh plane = Util::createPlaneMesh(40.f, 40.f);
+	plane.shader = &shader;
+	plane.textures.diffuse = diffuse;
+	plane.textures.normal = normal;
+	plane.textures.roughness = rough;
+	LTC_t maps = loadLTCTextures();
+
+	/** Nice screen while loading */
+	glClearColor(0.f,0.f,0.3f,1.0);
+	glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
+	glfwSwapBuffers(mWindow);
+
+
+	std::vector<Mesh*> meshes = Util::loadFromFile(FileSystem::getPath("Resources/hallway.obj").c_str());
+	for (Mesh* mesh : meshes) {
+		mesh->shader = &shader;
+	}
+
+	//std::vector<Mesh*> meshes;
+	//meshes.push_back(&plane);
+
+
+	glm::vec3 up(0.0f, 1.0f, 0.0f);
+	glm::vec3 right(1.0f, 0.0f, 0.0f);
+
+
+	AreaLight arealight(4.0f,4.0f, 4.0f);
+	AreaLight arealight2(30.0f,1.5f, 7.0f);
+	AreaLight arealight3(30.0f,1.5f, 7.0f);
+
+	arealight2.setColor(glm::vec3(1.0,0.5,0.0));
+	arealight3.setColor(glm::vec3(0.0,1.0,1.0));
+
+	glm::mat4 lightMat(1.0f);
+	lightMat = glm::rotate(lightMat, (float)(M_PI/2), right);
+	lightMat = glm::translate(lightMat, glm::vec3(0.0f, -5.0f, -5.5f));
+
+	glm::mat4 lightMat2(1.0f);	//
+	lightMat2 = glm::translate(lightMat2, glm::vec3(-20.0f, 9.f, -6.f));
+	lightMat2 = glm::rotate(lightMat2, (float)(M_PI/2), up);
+	lightMat2 = glm::rotate(lightMat2, (float)(M_PI/2), right);
+	arealight2.setMatrix(lightMat2);
+
+	glm::mat4 lightMat3(1.0f);
+	lightMat3 = glm::translate(lightMat3, glm::vec3(20.0f, 9.0f, -6.f));
+	lightMat3 = glm::rotate(lightMat3, (float)(M_PI/2), up);
+	lightMat3 = glm::rotate(lightMat3, (float)(-M_PI/2), right);
+	arealight3.setMatrix(lightMat3);
+
 	glfwSetInputMode(mWindow, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
-	glEnable(GL_DEPTH_TEST);
+	float delta = 0.0f;
+	bool usingMenu = false;
+	bool pressed = false;
 
-	// Create a sample shader that displays normal
-	Shader sampleShader(FileSystem::getPath("Shaders/geometry.vert.glsl").c_str(), FileSystem::getPath("Shaders/geometry.frag.glsl").c_str());
+	Mesh quad = Util::createQuad();
+	fb1 = Util::initFBO(width, height, 0);
+	fb2 = Util::initFBO(width, height, 0);
+	fb3 = Util::initFBO(width, height, 0);
 
-	// Load a model from obj file
-	//Model sampleModel(FileSystem::getPath("Resources/crytek_sponza/sponza.obj").c_str());
+	while (!glfwWindowShouldClose(mWindow)) {
+		time = glfwGetTime();
+		delta = time - lastFrame;
 
-	LightLtc lightLtc;
-
-    // Rendering Loop
-    while (glfwWindowShouldClose(mWindow) == false) {
-		glfwPollEvents();
-        // Background Fill Color
-        glClearColor(0.25f, 0.25f, 0.25f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (GLfloat)mWidth / (GLfloat)mHeight, mNear, mFar);
-		glm::mat4 view = camera.GetViewMatrix();
-		glm::mat4 model = glm::mat4();
-		sampleShader.Use();
-		model = glm::translate(model, glm::vec3(-1, 0, 0));
-		glUniformMatrix4fv(glGetUniformLocation(sampleShader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
-		glUniformMatrix4fv(glGetUniformLocation(sampleShader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
-		glUniformMatrix4fv(glGetUniformLocation(sampleShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
-		
-		RenderLightCube(projection, view, model, camera.Position, camera.Front);
-		//polyLight.Render(projection, view, model);
-		lightLtc.Render(projection, view, model);
-
-		model = glm::mat4();
-		model = glm::scale(model, glm::vec3(0.05f));    // The sponza model is too big, scale it first
-		//glUniformMatrix4fv(glGetUniformLocation(sampleShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
-		//sampleModel.Draw(sampleShader);
-
-        // Flip Buffers and Draw
-        glfwSwapBuffers(mWindow);
-    }   glfwTerminate();
-    return EXIT_SUCCESS;
-}
-
-
-// Is called whenever a key is pressed/released via GLFW
-void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode)
-{
-	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-		glfwSetWindowShouldClose(window, GL_TRUE);
-
-	// Camera movements
-	if (key == GLFW_KEY_W && (action == GLFW_PRESS || action == GLFW_REPEAT))
-		camera.ProcessKeyboard(FORWARD, 0.1);
-	if (key == GLFW_KEY_S && (action == GLFW_PRESS || action == GLFW_REPEAT))
-		camera.ProcessKeyboard(BACKWARD, 0.1);
-	if (key == GLFW_KEY_A && (action == GLFW_PRESS || action == GLFW_REPEAT))
-		camera.ProcessKeyboard(LEFT, 0.1);
-	if (key == GLFW_KEY_D && (action == GLFW_PRESS || action == GLFW_REPEAT))
-		camera.ProcessKeyboard(RIGHT, 0.1);
-}
-
-GLfloat lastX = 400, lastY = 300;
-bool firstMouse = true;
-void mouse_callback(GLFWwindow* window, double xpos, double ypos)
-{
-	int state = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT);
-	if (state == GLFW_PRESS) {
-		if (firstMouse)
-		{
-			lastX = xpos;
-			lastY = ypos;
-			firstMouse = false;
+		GLfloat cameraSpeed = 0.1f;
+		if(glfwGetKey(mWindow, GLFW_KEY_LEFT_SHIFT))
+				cameraSpeed += 1.0f;
+		if(glfwGetKey(mWindow, GLFW_KEY_ESCAPE))
+			glfwSetWindowShouldClose(mWindow, GL_TRUE);
+		if(glfwGetKey(mWindow,GLFW_KEY_W))
+			camera->mPosition += cameraSpeed * camera->mFacing;
+    if(glfwGetKey(mWindow,GLFW_KEY_S))
+			camera->mPosition -= cameraSpeed * camera->mFacing;
+    if(glfwGetKey(mWindow,GLFW_KEY_A))
+			camera->mPosition -= glm::normalize(glm::cross(camera->mFacing, glm::vec3(0.f,1.0f,0.0f))) * cameraSpeed;
+    if(glfwGetKey(mWindow,GLFW_KEY_D))
+			camera->mPosition += glm::normalize(glm::cross(camera->mFacing, glm::vec3(0.f,1.0f,0.0f))) * cameraSpeed;
+    if(glfwGetKey(mWindow,GLFW_KEY_F5)) {
+			shader.reload();
+			lpt.reload();
+			trunk.reload();
+			plain.reload();
 		}
 
-		GLfloat xoffset = xpos - lastX;
-		GLfloat yoffset = lastY - ypos;
+		if(glfwGetMouseButton(mWindow, GLFW_MOUSE_BUTTON_RIGHT)) {
+			if(!pressed) {
+				pressed = true;
+				if(usingMenu) {
+					glfwSetInputMode(mWindow, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+				}
+				else {
+					glfwSetInputMode(mWindow, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+				}
+				usingMenu = !usingMenu;
+			}
+		}
+		else {
+			pressed = false;
+		}
 
-		lastX = xpos;
-		lastY = ypos;
+		double x,y;
+		glfwGetCursorPos(mWindow,&x,&y);
+		if(!usingMenu) {
+			mouseMove(x-oldX,y-oldY);
+		}
+		oldX = x;
+		oldY = y;
 
-		camera.ProcessMouseMovement(xoffset, yoffset);
+		Util::useFBO(fb1, NULL, NULL);
+		glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
+		glEnable(GL_DEPTH_TEST);
+		glEnable(GL_CULL_FACE);
+
+		camera->update();
+
+		bindTextures(&maps);
+
+		for (Mesh* mesh : meshes) {
+			mesh->setRoughness(roughness);
+			arealight.use(*mesh->shader, 0);
+			arealight2.use(*mesh->shader, 1);
+			arealight3.use(*mesh->shader, 2);
+			mesh->draw();
+		}
+		arealight.draw();
+		arealight2.draw();
+		arealight3.draw();
+
+		if(true) { //supergui->bloom
+			Util::useFBO(fb2, fb1, NULL);
+			glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
+			glDisable(GL_DEPTH_TEST);
+			glDisable(GL_CULL_FACE);
+
+			glUseProgram(trunk);
+			glUniform1i(glGetUniformLocation(trunk, "texUnit"), 6 );
+			glBindVertexArray(quad.vao);
+			glDrawElements(GL_TRIANGLES, quad.indices.size(), GL_UNSIGNED_INT, 0);
+			glBindVertexArray(0);
+
+			Util::useFBO(fb3, fb2, NULL);
+			glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
+			glDisable(GL_DEPTH_TEST);
+			glDisable(GL_CULL_FACE);
+
+			glUseProgram(lpt);
+			glUniform1i(glGetUniformLocation(lpt, "texUnit"), 6 );
+			glUniform1i(glGetUniformLocation(lpt, "texSize"), fb2->width);
+			glBindVertexArray(quad.vao);
+			glDrawElements(GL_TRIANGLES, quad.indices.size(), GL_UNSIGNED_INT, 0);
+			glBindVertexArray(0);
+			Util::useFBO(fb2, fb3, NULL);
+			glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
+			glDisable(GL_DEPTH_TEST);
+			glDisable(GL_CULL_FACE);
+
+			glUseProgram(lpt);
+			glUniform1i(glGetUniformLocation(lpt, "texUnit"), 6 );
+			glUniform1i(glGetUniformLocation(lpt, "texSize"), fb3->width);
+			glBindVertexArray(quad.vao);
+			glDrawElements(GL_TRIANGLES, quad.indices.size(), GL_UNSIGNED_INT, 0);
+			glBindVertexArray(0);
+			Util::useFBO(fb3, fb2, NULL);
+			glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
+			glDisable(GL_DEPTH_TEST);
+			glDisable(GL_CULL_FACE);
+
+			glUseProgram(lpt);
+			glUniform1i(glGetUniformLocation(lpt, "texUnit"), 6 );
+			glUniform1i(glGetUniformLocation(lpt, "texSize"), fb2->width);
+			glBindVertexArray(quad.vao);
+			glDrawElements(GL_TRIANGLES, quad.indices.size(), GL_UNSIGNED_INT, 0);
+			glBindVertexArray(0);
+
+			Util::useFBO(NULL, fb1, fb3);
+			glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
+			glDisable(GL_DEPTH_TEST);
+			glDisable(GL_CULL_FACE);
+
+			glUseProgram(plain);
+			glUniform1i(glGetUniformLocation(plain, "texUnit"), 6 );
+			glUniform1i(glGetUniformLocation(plain, "secondTexUnit"), 7 );
+			glBindVertexArray(quad.vao);
+			glDrawElements(GL_TRIANGLES, quad.indices.size(), GL_UNSIGNED_INT, 0);
+			glBindVertexArray(0);
+		}
+		else {
+			Util::useFBO(NULL, fb1, NULL);
+			glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
+			glDisable(GL_DEPTH_TEST);
+			glDisable(GL_CULL_FACE);
+
+			glUseProgram(plain);
+			glUniform1i(glGetUniformLocation(plain, "texUnit"), 6 );
+			glBindVertexArray(quad.vao);
+			glDrawElements(GL_TRIANGLES, quad.indices.size(), GL_UNSIGNED_INT, 0);
+			glBindVertexArray(0);
+		}
+
+		glfwSwapBuffers(mWindow);
+		glfwPollEvents();
+
+		/* Fps counter handling */
+		frames++;
+		if (time - time_since_update > 1.0f) {
+			int fps = frames/(time - time_since_update);
+			float ms = 1000.0f /frames;
+			time_since_update = time;
+			frames = 0;
+		}
+		lastFrame = time;
 	}
-	if (state == GLFW_RELEASE) {
-		firstMouse = true;
-	}
-}
 
-void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
-{
-	camera.ProcessMouseScroll(yoffset);
+	glfwTerminate();
+	return 0;
 }

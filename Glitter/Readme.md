@@ -9,7 +9,9 @@ Sample shader codes are in Glitter/Shaders directory. Two models are included in
 
 Email the TA if you have question on the skeleton code.
 
+BUILD NOTE:
 
+Edit the Glitter project Include directories 
 
 
 

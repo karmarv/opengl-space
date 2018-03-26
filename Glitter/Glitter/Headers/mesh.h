@@ -1,0 +1,49 @@
+#pragma once
+#ifndef __MESH_H__
+#define __MESH_H__
+
+#include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <vector>
+
+#include "shader.h"
+
+
+struct Vertex {
+		glm::vec3 position;
+		glm::vec3 normal;
+		glm::vec3 tangent;
+		glm::vec3 bitangent;
+		glm::vec2 textureCoordinates;
+};
+
+struct Textures {
+	unsigned int diffuse;
+	unsigned int normal;
+	unsigned int roughness;
+};
+
+
+class Mesh {
+public:
+	std::vector<Vertex> vertices;
+	std::vector<unsigned int> indices;
+	Textures textures;
+	Shader* shader;
+
+	Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices);
+	void setModelMatrix(glm::mat4 matrix);
+	void setRoughness(float roughness) { this->roughness = roughness; }
+
+	void draw();
+
+	glm::mat4 model;
+	unsigned int vao, vbo, ibo;
+private:
+	float roughness = 0.25f;
+	glm::vec3 diffuseColor;
+	glm::vec3 specularColor;
+	void setupMesh();
+};
+
+#endif
