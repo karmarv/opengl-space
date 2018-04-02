@@ -1,22 +1,7 @@
-# OpenGL Skeleton Code
-CS 280 / ECE 594Q Introduction to Computer Graphics, Fall 2017, UCSB
 
-This code is modified from Glitter project on GitHub, adding camera, shader and model loading functions. The original readme file goes as follows, copyrights are with the original authors.
-
-Use CMake to build the project. WASD to move, mouse left-click to rotate the camera, ESC to quit to program.
-
-Sample shader codes are in Glitter/Shaders directory. Two models are included in Glitter/Resources directory, feel free to add more models to your project.
-
-Email the TA if you have question on the skeleton code.
-
-BUILD NOTE:
-
-Edit the Glitter project Include directories 
-
-
-
-
-
+Reference: 
+https://github.com/tistatos/supersonic-sunshine
+https://eheitzresearch.wordpress.com/415-2/
 
 
 # [Glitter](http://polytonic.github.io/Glitter/)
