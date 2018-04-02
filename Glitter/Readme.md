@@ -1,7 +1,12 @@
 
 Reference: 
-https://github.com/tistatos/supersonic-sunshine
-https://eheitzresearch.wordpress.com/415-2/
+1. LTC using OpenGL in Glitter Cpp template project
+	https://github.com/tistatos/supersonic-sunshine
+	https://eheitzresearch.wordpress.com/415-2/
+
+2. LTC using WebGL 
+	Deploy ltc_webgl to a webserver like apache and run on localhost for test
+
 
 
 # [Glitter](http://polytonic.github.io/Glitter/)
